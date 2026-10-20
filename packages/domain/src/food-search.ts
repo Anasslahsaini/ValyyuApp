@@ -45,10 +45,10 @@ export function matchScore(queryTokens: string[], texts: string[][]): number {
     let score = 0;
     let ok = true;
     for (let qi = 0; qi < queryTokens.length; qi++) {
-      const q = queryTokens[qi];
+      const q = queryTokens[qi]!;
       let tokenScore = 0;
       for (let ti = 0; ti < tokens.length; ti++) {
-        const t = tokens[ti];
+        const t = tokens[ti]!;
         if (!t.startsWith(q)) continue;
         let s = t === q ? 10 : 6;
         if (ti === 0) s += 4;

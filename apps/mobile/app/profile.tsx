@@ -1,5 +1,5 @@
 import { useClerk, useUser } from '@clerk/expo';
-import { color, layout } from '@workspace/tokens';
+import { color, layout, radius } from '@workspace/tokens';
 import { Banner, Button, ListRow } from '@workspace/ui';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
@@ -82,5 +82,5 @@ export default function Profile() {
 const styles = StyleSheet.create({
   root: { backgroundColor: color.bg.paper },
   content: { padding: layout.margin, gap: layout.gapCards },
-  group: { borderRadius: 12, overflow: 'hidden' },
+  group: { borderRadius: radius.field, overflow: 'hidden' },
 });

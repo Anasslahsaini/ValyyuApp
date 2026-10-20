@@ -10,6 +10,7 @@ export const DIETS: Diet[] = ['vegetarian', 'vegan', 'halal', 'gluten_free', 'da
 export const EQUIPMENT_FOR: Record<Place, string[]> = {
   home: ['bodyweight'],
   gym: ['bodyweight', 'dumbbells', 'barbell', 'machine', 'cable', 'bench', 'pullup'],
+  outside: ['bodyweight'],
   none: ['bodyweight'],
 };
 export type Level = NonNullable<Settings['fitnessLevel']>;

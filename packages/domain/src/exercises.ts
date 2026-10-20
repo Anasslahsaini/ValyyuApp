@@ -12,7 +12,8 @@ export function exerciseImages(exercises: readonly Pick<CatalogueExercise, 'imag
       if (!url.startsWith(prefix)) throw new Error('Unknown public exercise image.');
       const path = decodeURIComponent(url.slice(prefix.length));
       const bytes = (imageSizes as Record<string, number>)[path];
-      if (!Number.isSafeInteger(bytes) || bytes <= 0) throw new Error('Missing image size.');
+      if (bytes === undefined || !Number.isSafeInteger(bytes) || bytes <= 0)
+        throw new Error('Missing image size.');
       const key = `${source.revision}/${path}`;
       unique.set(key, { key, path, url, bytes });
     }
@@ -88,7 +89,7 @@ export type CatalogueExercise = {
 export const exerciseLibrary: CatalogueExercise[] = data.map((e) => ({
   id: e.id,
   name: e.name,
-  muscle: muscleMapping[e.primaryMuscles[0]] ?? 'full',
+  muscle: (e.primaryMuscles[0] ? muscleMapping[e.primaryMuscles[0]] : undefined) ?? 'full',
   equipment: e.equipment ? (equipmentNames[e.equipment] ?? e.equipment) : 'Unspecified equipment',
   primaryMuscles: e.primaryMuscles,
   secondaryMuscles: e.secondaryMuscles,
@@ -138,7 +139,7 @@ export function canDoExercise(equipment: string, mine: readonly string[], name?:
   const value = (equipment || '').toLowerCase();
   const needs = name ? namedAccessoriesFor(name) : [];
   if (needs.some((chip) => !mine.includes(chip))) return false;
-  if (!value || equipmentAliases.bodyweight.some((alias) => value.includes(alias))) return true;
+  if (!value || (equipmentAliases.bodyweight ?? []).some((alias) => value.includes(alias))) return true;
   // "Other"/unspecified equipment whose only stated need is the named accessory (e.g. Scapular Pull-Up).
   if (needs.length && (value === 'other equipment' || value === 'unspecified equipment')) return true;
   return mine.some((key) => (equipmentAliases[key] ?? [key]).some((alias) => value.includes(alias)));

@@ -56,17 +56,21 @@ La CI GitHub Actions lance les quatre sur Ubuntu et Windows à chaque PR.
 
 ## Structure
 
-| Dossier             | Rôle                                                                                                   | Tests     |
-| ------------------- | ------------------------------------------------------------------------------------------------------ | --------- |
-| `apps/mobile`       | App Expo SDK 57, expo-router, onglets natifs                                                           | jest-expo |
-| `packages/config`   | Nom de l'app, identifiants des stores, interrupteurs (`features`)                                      | Vitest    |
-| `packages/tokens`   | Valeurs du design system v1 + calcul des contrastes WCAG                                               | Vitest    |
-| `packages/ui`       | 8 composants accessibles (Text, Button, IconButton, Card, TextField, ListRow, SegmentedControl, Sheet) | jest-expo |
-| `packages/i18n`     | i18next, textes dans `locales/fr.json`                                                                 | Vitest    |
-| `packages/tsconfig` | Config TypeScript partagée (strict)                                                                    | —         |
-| `docs/`             | Audit, normes, design, specs, plans, ADR                                                               | —         |
+| Dossier              | Rôle                                                                                          | Tests     |
+| -------------------- | --------------------------------------------------------------------------------------------- | --------- |
+| `apps/mobile`        | App Expo SDK 57, expo-router, onglets natifs                                                  | jest-expo |
+| `packages/config`    | Nom de l'app, identifiants des stores, interrupteurs (`features`)                             | Vitest    |
+| `packages/tokens`    | Valeurs du design system v1 + calcul des contrastes WCAG                                      | Vitest    |
+| `packages/ui`        | Composants accessibles (Text, Button, Card, TextField, ListRow, choix, code…)                 | jest-expo |
+| `packages/domain`    | Logique métier reprise de l'ancienne app (repas, sport, style, premier lancement), sans écran | node:test |
+| `packages/life-data` | Schéma des données de la personne (zod)                                                       | —         |
+| `packages/i18n`      | i18next, textes dans `locales/fr.json`                                                        | Vitest    |
+| `packages/tsconfig`  | Config TypeScript partagée (strict)                                                           | —         |
+| `docs/`              | Audit, normes, design, specs, plans, ADR                                                      | —         |
 
 ## Règles du code
+
+- **Code métier repris** (`packages/domain`) : vérifié avec ses propres réglages TypeScript, un peu plus souples. L'app ne lit que ses types générés (`dist/types`, créés par `pnpm install` et par `pnpm typecheck`). Le code neuf de l'app reste en mode strict complet.
 
 - **Le nom de l'app** n'est écrit que dans `packages/config/src/app.ts`. Un test échoue s'il apparaît ailleurs dans `apps/` ou `packages/`.
 - **Aucune valeur de design en dur** : couleurs, tailles, espaces et rayons viennent de `@workspace/tokens`. Un changement de token se voit partout.

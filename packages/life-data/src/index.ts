@@ -221,10 +221,12 @@ export const LifeSchema = z.object({
     sex: z.enum(['female', 'male', 'other']).optional(),
     birthYear: z.number().int().min(1900).max(2100).optional(),
     heightCm: z.number().int().min(90).max(250).optional(),
-    trainingPlace: z.enum(['home', 'gym', 'none']).optional(),
+    trainingPlace: z.enum(['home', 'gym', 'outside', 'none']).optional(),
     sessionsPerWeek: z.number().int().min(0).max(7).optional(),
     styleVibes: z.array(z.string().min(1).max(30)).max(6).optional(),
     onboardedAt: z.string().max(40).optional(),
+    /** When the person agreed to the use of health data (size, weight, allergies, pain); absent = no consent. */
+    healthConsentAt: z.string().max(40).optional(),
     // Coach and nutritionist (all optional). Session length uses `minutes` above; refused foods use `dislikes`.
     fitnessLevel: z.enum(['beginner', 'intermediate', 'advanced']).optional(),
     injuries: z

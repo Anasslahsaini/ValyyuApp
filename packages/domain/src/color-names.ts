@@ -96,7 +96,7 @@ const ALIASES: Record<string, SwatchName> = {
 export function hexToRgb(hex: string): RGB | null {
   const m = /^#?([0-9a-f]{6})$/i.exec(hex.trim());
   if (!m) return null;
-  const v = parseInt(m[1], 16);
+  const v = parseInt(m[1] ?? '', 16);
   return [(v >> 16) & 255, (v >> 8) & 255, v & 255];
 }
 export function rgbToHex([r, g, b]: RGB): string {
@@ -177,12 +177,15 @@ export function deltaE2000([L1, a1, b1]: Lab, [L2, a2, b2]: Lab): number {
   return Math.sqrt((dLp / Sl) ** 2 + (dCp / Sc) ** 2 + (dHp / Sh) ** 2 + Rt * (dCp / Sc) * (dHp / Sh));
 }
 
-const swatchLab = SWATCH_NAMES.map((name) => ({ name, lab: rgbToLab(hexToRgb(swatches[name]) as RGB) }));
+const swatchLab = SWATCH_NAMES.map((name) => ({
+  name,
+  lab: rgbToLab(hexToRgb(swatches[name] ?? '#000000') as RGB),
+}));
 
 /** Hex for a swatch name or a known synonym ("Navy", "marine", "charcoal"). */
 export function swatchHex(name: string): string | null {
   const n = normalizeColorName(name);
-  return n ? swatches[n] : null;
+  return n ? (swatches[n] ?? null) : null;
 }
 /** Maps free text onto a swatch name when we recognise it. */
 export function normalizeColorName(text: string): SwatchName | null {
@@ -249,8 +252,8 @@ export function dominantSwatch(
 ): { name: SwatchName; hex: string } | null {
   const votes = new Map<SwatchName, { n: number; r: number; g: number; b: number }>();
   for (let i = 0; i + 2 < pixels.length; i += channels) {
-    if (channels === 4 && pixels[i + 3] < 128) continue; // transparent
-    const rgb: RGB = [pixels[i], pixels[i + 1], pixels[i + 2]];
+    if (channels === 4 && (pixels[i + 3] ?? 0) < 128) continue; // transparent
+    const rgb: RGB = [pixels[i] ?? 0, pixels[i + 1] ?? 0, pixels[i + 2] ?? 0];
     const name = nearestSwatchLab(rgbToLab(rgb));
     const v = votes.get(name) ?? { n: 0, r: 0, g: 0, b: 0 };
     v.n += 1;

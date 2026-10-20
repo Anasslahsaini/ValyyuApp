@@ -42,7 +42,7 @@ function toNumber(raw: string): number {
     .reduce((sum, part) => {
       if (part.includes('/')) {
         const [a, b] = part.split('/').map(Number);
-        return sum + (b ? a / b : 0);
+        return sum + (a !== undefined && b ? a / b : 0);
       }
       return sum + Number(part.replace(',', '.'));
     }, 0);
@@ -50,7 +50,7 @@ function toNumber(raw: string): number {
 
 export function parseIngredient(line: string): ParsedIngredient {
   let rest = line
-    .replace(/[½¼¾⅓⅔⅛]/g, (m) => FRACTIONS[m])
+    .replace(/[½¼¾⅓⅔⅛]/g, (m) => FRACTIONS[m] ?? m)
     .replace(/\s+/g, ' ')
     .trim();
   let qty: number | undefined;
@@ -58,7 +58,7 @@ export function parseIngredient(line: string): ParsedIngredient {
     /^(\d+\/\d+|\d+(?:[.,]\d+)?(?: \d+\/\d+)?)(?: ?(?:-|–|to|à) ?(\d+(?:[.,]\d+)?))?(?:\s*x\b)?\s*/i,
   );
   if (q) {
-    qty = toNumber(q[2] ?? q[1]);
+    qty = toNumber(q[2] ?? q[1] ?? '');
     rest = rest.slice(q[0].length);
   }
   let unit: string | undefined;

@@ -8,18 +8,49 @@ import { CLERK_PUBLISHABLE_KEY } from '../src/auth/config';
 import { MissingConfig } from '../src/auth/MissingConfig';
 import { CloseButton } from '../src/navigation/CloseButton';
 import { largeTitleOptions } from '../src/navigation/stack-options';
+import { LifeProvider, useLife } from '../src/data/LifeProvider';
+import { GateContext } from '../src/navigation/gate';
 import { useAppReady } from '../src/useAppReady';
 
-/** Signed out: only the sign-in screens. Signed in: the app. A deep link cannot skip this. */
+/** Signed out → sign-in. Signed in, first launch not done → first launch. Otherwise the app. Deep links cannot skip a step. */
 function RootStack() {
+  const { isLoaded, isSignedIn, userId } = useAuth();
+  if (!isLoaded) return null;
+  // Keyed by user: another account starts from a fresh, unloaded state.
+  if (isSignedIn && userId) {
+    return (
+      <LifeProvider key={userId} userId={userId}>
+        <SignedInStack />
+      </LifeProvider>
+    );
+  }
+  return (
+    <GateContext.Provider value={{ signedIn: false, onboarded: false }}>
+      <AppStack signedIn={false} onboarded={false} />
+    </GateContext.Provider>
+  );
+}
+
+function SignedInStack() {
+  const { state, ready } = useLife();
+  if (!ready) return null;
+  const onboarded = !!state.settings.onboardedAt;
+  return (
+    <GateContext.Provider value={{ signedIn: true, onboarded }}>
+      <AppStack signedIn onboarded={onboarded} />
+    </GateContext.Provider>
+  );
+}
+
+function AppStack({ signedIn, onboarded }: { signedIn: boolean; onboarded: boolean }) {
   const { t } = useTranslation();
   const router = useRouter();
-  const { isLoaded, isSignedIn } = useAuth();
-  if (!isLoaded) return null;
-  const signedIn = isSignedIn;
   return (
-    <Stack screenOptions={{ contentStyle: { backgroundColor: color.bg.paper } }}>
-      <Stack.Protected guard={signedIn}>
+    <Stack screenOptions={{ contentStyle: { backgroundColor: color.bg.paper }, animation: 'fade' }}>
+      <Stack.Protected guard={signedIn && !onboarded}>
+        <Stack.Screen name="(onboarding)" options={{ headerShown: false }} />
+      </Stack.Protected>
+      <Stack.Protected guard={signedIn && onboarded}>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen
           name="profile"

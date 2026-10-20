@@ -1,7 +1,7 @@
-import { useAuth } from '@clerk/expo';
 import { Redirect } from 'expo-router';
+import { useGate } from '../src/navigation/gate';
 
 export default function Index() {
-  const { isSignedIn } = useAuth();
-  return <Redirect href={isSignedIn ? '/today' : '/welcome'} />;
+  const { signedIn, onboarded } = useGate();
+  return <Redirect href={!signedIn ? '/welcome' : onboarded ? '/today' : '/start'} />;
 }

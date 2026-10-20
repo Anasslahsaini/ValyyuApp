@@ -8,3 +8,4 @@ export { SegmentedControl, type SegmentedControlProps } from './SegmentedControl
 export { Sheet, type SheetProps } from './Sheet';
 export { CodeInput, type CodeInputProps } from './CodeInput';
 export { Banner, type BannerProps } from './Banner';
+export { CheckboxRow, Chip, ChoiceRow, StepProgress } from './choices';
