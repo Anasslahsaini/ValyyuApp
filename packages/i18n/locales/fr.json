@@ -25,7 +25,17 @@
     "micro": "Micro"
   },
   "micro": {
-    "soon": "Le micro arrive bientôt."
+    "voiceSoon": "La voix arrive avec la prochaine version. En attendant, écris ta demande.",
+    "typeLabel": "Que veux-tu faire ?",
+    "typeHelp": "Par exemple : « ajoute du lait aux courses »",
+    "send": "OK",
+    "youSaid": "Tu as dit : « {{text}} »",
+    "yes": "Oui",
+    "no": "Non",
+    "undo": "Annuler",
+    "tryExamples": "Essaie une de ces phrases :",
+    "examples": "Exemples",
+    "useExample": "Écrire : {{text}}"
   },
   "profile": {
     "title": "Profil",
@@ -38,6 +48,31 @@
       "message": "Ton compte et tes données seront effacés. Si tu as un abonnement, annule-le aussi dans l'App Store.",
       "confirm": "Supprimer",
       "failed": "Ton compte n'a pas pu être supprimé. Rien n'a été effacé ; réessaie."
+    },
+    "me": "Moi",
+    "email": "E-mail",
+    "info": {
+      "title": "Mes infos"
+    },
+    "health": {
+      "title": "Données de santé",
+      "on": "Activées",
+      "off": "Désactivées",
+      "givenOn": "Accord donné le {{date}}",
+      "withdrawHint": "Si tu retires ton accord, on efface ta taille, ton poids, tes allergies et tes douleurs, et les calories disparaissent.",
+      "withdraw": "Retirer mon accord",
+      "withdrawTitle": "Retirer ton accord ?",
+      "withdrawMessage": "Tes données de santé seront effacées de ce téléphone. Tes repas et tes séances restent.",
+      "afterConsent": "Ensuite, ajoute ta taille et ton poids dans Mes infos : on calcule tes calories (estimation).",
+      "give": "Donner mon accord"
+    },
+    "data": "Mes données",
+    "dataWhere": "Pour l'instant, tout est gardé sur ce téléphone, rien sur nos serveurs.",
+    "erase": {
+      "row": "Effacer mes données de ce téléphone",
+      "title": "Tout effacer ?",
+      "message": "Repas, séances, dressing et réponses seront effacés. Ton compte reste, tu recommenceras au premier lancement.",
+      "confirm": "Tout effacer"
     }
   },
   "auth": {

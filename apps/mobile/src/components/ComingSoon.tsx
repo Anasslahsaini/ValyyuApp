@@ -5,11 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { ScrollView, StyleSheet } from 'react-native';
 
 /** Empty screen while the real one is designed. Scrolls under the large title, above the tab bar. */
-export function ComingSoon({
-  messageKey = tKey('common.comingSoon'),
-}: {
-  messageKey?: 'common.comingSoon' | 'micro.soon';
-}) {
+export function ComingSoon({ messageKey = tKey('common.comingSoon') }: { messageKey?: 'common.comingSoon' }) {
   const { t } = useTranslation();
   return (
     <ScrollView contentInsetAdjustmentBehavior="automatic" contentContainerStyle={styles.content}>

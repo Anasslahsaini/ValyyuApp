@@ -15,6 +15,19 @@ La documentation technique détaillée est dans [`README.md`](README.md).
 > - design refait avec Claude Design (design system v1) ;
 > - l'app suit la langue du téléphone ; français au lancement, anglais et arabe prêts ;
 > - la communauté arrive en dernier.
+>
+> **Où en est la refonte (20 octobre 2026)**, tout marche hors ligne, sur le téléphone :
+>
+> - connexion par e-mail (code) ou Google ; Apple attend le compte développeur ;
+> - premier lancement en 5 étapes, avec l'écran « données de santé » (case non cochée) et la règle des mineurs ;
+> - Aujourd'hui : la semaine en 1 touche, puis les 3 décisions du jour (repas, séance, tenue) ;
+> - Repas : semaine jour par jour, frigo et idées de recettes, liste de courses avec budget ;
+> - Sport : séance du jour, saisie des séries avec minuteur de repos, records et dernières séances ;
+> - Style : dressing en photos, tenue du jour, changer une pièce, « Je la porte » ;
+> - Micro : commandes **écrites** avec Annuler (la voix arrive avec le serveur) ;
+> - Profil : mes infos, retrait de l'accord santé (efface les données), effacement des données, suppression du compte.
+>
+> Pas encore repris : météo, scan des codes-barres, IA (nutritionniste, coach, « Parle-moi de toi »), abonnement, notifications, succès, page admin.
 
 ---
 

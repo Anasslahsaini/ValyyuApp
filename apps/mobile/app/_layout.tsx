@@ -1,13 +1,10 @@
 import { ClerkProvider, useAuth } from '@clerk/expo';
 import { tokenCache } from '@clerk/expo/token-cache';
 import { color } from '@workspace/tokens';
-import { Stack, useRouter } from 'expo-router';
+import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { useTranslation } from 'react-i18next';
 import { CLERK_PUBLISHABLE_KEY } from '../src/auth/config';
 import { MissingConfig } from '../src/auth/MissingConfig';
-import { CloseButton } from '../src/navigation/CloseButton';
-import { largeTitleOptions } from '../src/navigation/stack-options';
 import { LifeProvider, useLife } from '../src/data/LifeProvider';
 import { GateContext } from '../src/navigation/gate';
 import { useAppReady } from '../src/useAppReady';
@@ -43,8 +40,6 @@ function SignedInStack() {
 }
 
 function AppStack({ signedIn, onboarded }: { signedIn: boolean; onboarded: boolean }) {
-  const { t } = useTranslation();
-  const router = useRouter();
   return (
     <Stack screenOptions={{ contentStyle: { backgroundColor: color.bg.paper }, animation: 'fade' }}>
       <Stack.Protected guard={signedIn && !onboarded}>
@@ -52,21 +47,7 @@ function AppStack({ signedIn, onboarded }: { signedIn: boolean; onboarded: boole
       </Stack.Protected>
       <Stack.Protected guard={signedIn && onboarded}>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen
-          name="profile"
-          options={{
-            ...largeTitleOptions,
-            title: t('profile.title'),
-            presentation: 'modal',
-            headerRight: () => (
-              <CloseButton
-                onPress={() => {
-                  router.back();
-                }}
-              />
-            ),
-          }}
-        />
+        <Stack.Screen name="profile" options={{ presentation: 'modal', headerShown: false }} />
         <Stack.Screen name="(community)" options={{ headerShown: false }} />
         <Stack.Screen name="dev" options={{ headerShown: false }} />
       </Stack.Protected>
