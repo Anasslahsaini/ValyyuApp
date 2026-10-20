@@ -5,5 +5,9 @@ import { isDevBuild } from '../../src/env';
 /** Developer screens: unreachable in store builds. */
 export default function DevLayout() {
   if (!isDevBuild()) return <Redirect href="/" />;
-  return <Stack screenOptions={largeTitleOptions} />;
+  return (
+    <Stack screenOptions={largeTitleOptions}>
+      <Stack.Screen name="catalog" options={{ title: 'Catalogue' }} />
+    </Stack>
+  );
 }
