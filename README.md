@@ -22,6 +22,12 @@ pnpm install
 pnpm --filter @workspace/mobile start
 ```
 
+Avant le premier lancement, connecte-toi à un compte Expo gratuit (expo.dev), **le même** sur l'ordinateur et dans Expo Go (onglet Profil) :
+
+```sh
+pnpm --filter @workspace/mobile exec expo login
+```
+
 Si VS Code souligne encore les imports en rouge après `pnpm install` : `Ctrl+Shift+P` → « TypeScript: Restart TS Server ».
 
 Un QR code s'affiche dans le terminal :
