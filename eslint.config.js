@@ -41,7 +41,34 @@ export default tseslint.config(
       'apps/mobile/app/dev/**',
     ],
     plugins: { i18next },
-    rules: { 'i18next/no-literal-string': ['error', { mode: 'jsx-only' }] },
+    rules: {
+      'i18next/no-literal-string': [
+        'error',
+        {
+          mode: 'jsx-only',
+          'jsx-attributes': {
+            include: [
+              'label',
+              'title',
+              'placeholder',
+              'accessibilityLabel',
+              'accessibilityHint',
+              'help',
+              'error',
+              'unit',
+            ],
+          },
+        },
+      ],
+    },
+  },
+  {
+    // Testing Library types element props as any; reading props.style in assertions is intended.
+    files: ['**/__tests__/**', '**/*.test.{ts,tsx}'],
+    rules: {
+      '@typescript-eslint/no-unsafe-assignment': 'off',
+      '@typescript-eslint/no-unsafe-member-access': 'off',
+    },
   },
   {
     files: ['**/*.{js,cjs,mjs}'],
