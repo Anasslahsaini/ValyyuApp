@@ -1,6 +1,6 @@
 export const nutrientKeys = ['calories', 'protein', 'carbs', 'fat'] as const;
 export type Nutrient = (typeof nutrientKeys)[number];
-type Nutrition = Record<Nutrient, number> & { unknownNutrients?: Nutrient[] };
+type Nutrition = Record<Nutrient, number> & { unknownNutrients?: Nutrient[] | undefined };
 
 /** Old all-zero entries are ambiguous, not evidence of a zero-calorie meal. */
 export function nutritionValue(record: Nutrition, key: Nutrient): number | undefined {
@@ -41,9 +41,9 @@ type MealLike = Nutrition & {
   slot: MealSlot;
   servings: number;
   estimated: boolean;
-  favorite?: boolean;
-  grams?: number;
-  foodRef?: { source: 'usda' | 'off' | 'ai' | 'manual'; id: string };
+  favorite?: boolean | undefined;
+  grams?: number | undefined;
+  foodRef?: { source: 'usda' | 'off' | 'ai' | 'manual'; id: string } | undefined;
 };
 
 /** Default slot for "now": the meal people most likely mean when they open the sheet. */

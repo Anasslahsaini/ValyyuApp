@@ -18,7 +18,7 @@ export type FridgeIdea = {
   missing: string[];
 };
 
-type PantryLike = Pick<PantryItem, 'name'> & { expiresOn?: string };
+type PantryLike = Pick<PantryItem, 'name'> & { expiresOn?: string | undefined };
 
 /** The ingredients that count (no salt / water / oil splash, no optional garnish). */
 const counted = (r: PlanRecipe) => r.ingredients.filter((i) => !i.staple && !i.optional);
@@ -154,7 +154,7 @@ export const planGroceries = (groceries: readonly GroceryItem[]) =>
 
 /** Calories burnt by the training sessions logged on `date` (0 when none). */
 export function trainingKcal(
-  sessions: readonly { date: string; durationSec?: number }[],
+  sessions: readonly { date: string; durationSec?: number | undefined }[],
   date: string,
   weightKg?: number,
 ): number {
@@ -166,7 +166,7 @@ export function trainingKcal(
 /** The day's calorie target: the profile's target plus what training burnt that day (0 = no target). */
 export function dayCalorieTarget(
   base: number,
-  sessions: readonly { date: string; durationSec?: number }[],
+  sessions: readonly { date: string; durationSec?: number | undefined }[],
   date: string,
   weightKg?: number,
 ): { target: number; training: number } {

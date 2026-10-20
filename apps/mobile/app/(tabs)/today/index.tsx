@@ -4,7 +4,6 @@ import { color, layout, radius, size, space } from '@workspace/tokens';
 import { Banner, Button, Card, ListRow, Text } from '@workspace/ui';
 import { useRouter } from 'expo-router';
 import { useMemo, useState } from 'react';
-import { tKey } from '@workspace/i18n';
 import { useTranslation } from 'react-i18next';
 import { ActivityIndicator, ScrollView, StyleSheet, View } from 'react-native';
 import Animated, { FadeIn, FadeInDown } from 'react-native-reanimated';
@@ -12,17 +11,9 @@ import { DecisionCard } from '../../../src/components/DecisionCard';
 import { DomainTag } from '../../../src/components/DomainTag';
 import { Icon } from '../../../src/components/Icon';
 import { useLife } from '../../../src/data/LifeProvider';
+import { localDay, SLOT_KEY } from '../../../src/meals/format';
 import { useCatalogue } from '../../../src/meals/useCatalogue';
 import { todayView } from '../../../src/today/today';
-
-const localDay = (d: Date) =>
-  `${String(d.getFullYear())}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-const SLOT_KEY = {
-  breakfast: tKey('today.slot.breakfast'),
-  lunch: tKey('today.slot.lunch'),
-  dinner: tKey('today.slot.dinner'),
-  snack: tKey('today.slot.snack'),
-} as const;
 
 /** Aujourd'hui: A1 new person, A2 three ready decisions, A3 day done, A4 loading. */
 export default function Today() {

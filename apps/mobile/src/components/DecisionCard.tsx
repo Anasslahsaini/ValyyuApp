@@ -17,6 +17,8 @@ type Props = {
   onOk?: () => void;
   changing?: boolean;
   index?: number;
+  /** Optional link under the title, e.g. "Voir la recette". */
+  details?: { label: string; onPress: () => void };
 };
 
 /** Design "carte décision": domain tag, what is decided, Changer / OK (OK at the end, lime). */
@@ -30,6 +32,7 @@ export function DecisionCard({
   onOk,
   changing = false,
   index = 0,
+  details,
 }: Props) {
   const { t } = useTranslation();
   return (
@@ -51,6 +54,11 @@ export function DecisionCard({
         <Text variant="footnote" tone="secondary">
           {note}
         </Text>
+      ) : null}
+      {details ? (
+        <View style={styles.details}>
+          <Button kind="tertiary" label={details.label} onPress={details.onPress} />
+        </View>
       ) : null}
       {done ? (
         <View style={styles.done}>
@@ -96,4 +104,5 @@ const styles = StyleSheet.create({
   actions: { flexDirection: 'row', gap: space[3], flexWrap: 'wrap' },
   flex: { flex: 1, minWidth: 140 },
   done: { flexDirection: 'row', alignItems: 'center', gap: space[2] },
+  details: { alignItems: 'flex-start' },
 });

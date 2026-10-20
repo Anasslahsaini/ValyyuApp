@@ -15,6 +15,8 @@ export type TextProps = {
   align?: 'auto' | 'center';
   /** Hide from screen readers when another element already speaks this text. */
   hiddenFromScreenReaders?: boolean;
+  /** Struck through (a ticked grocery line); the checked state is also given in words or by role. */
+  strike?: boolean;
   children: ReactNode;
 };
 
@@ -45,6 +47,7 @@ export function Text({
   accessibilityRole,
   align = 'auto',
   hiddenFromScreenReaders = false,
+  strike = false,
   children,
 }: TextProps) {
   return (
@@ -59,6 +62,7 @@ export function Text({
         { color: override ?? toneColor[tone] },
         numeric && { fontVariant: ['tabular-nums'] },
         align === 'center' && { textAlign: 'center' },
+        strike && { textDecorationLine: 'line-through' },
       ]}
     >
       {children}

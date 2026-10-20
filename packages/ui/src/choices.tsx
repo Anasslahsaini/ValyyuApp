@@ -36,21 +36,26 @@ export function ChoiceRow({
   );
 }
 
-/** Multi-choice pill (diet, allergies). Selected = border + check mark, never color alone. */
+/**
+ * Multi-choice pill (diet, allergies). Selected = border + check mark, never color alone.
+ * With `action`, a one-tap action instead (read as a button with that full name, e.g. "Ajouter Tomate au frigo").
+ */
 export function Chip({
   label,
-  selected,
+  selected = false,
   onPress,
+  action,
 }: {
   label: string;
-  selected: boolean;
+  selected?: boolean;
   onPress: () => void;
+  action?: string;
 }) {
   return (
     <Pressable
-      accessibilityRole="checkbox"
-      accessibilityLabel={label}
-      accessibilityState={{ checked: selected }}
+      accessibilityRole={action ? 'button' : 'checkbox'}
+      accessibilityLabel={action ?? label}
+      {...(action ? {} : { accessibilityState: { checked: selected } })}
       onPress={onPress}
       hitSlop={{ top: 4, bottom: 4 }}
       style={({ pressed }) => [styles.chip, selected && styles.chipSelected, pressed && styles.pressed]}

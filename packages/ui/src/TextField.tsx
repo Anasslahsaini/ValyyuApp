@@ -11,7 +11,7 @@ export type TextFieldProps = {
   help?: string;
   /** Unit shown as text at the end of the field (e.g. "cm"). */
   unit?: string;
-  keyboardType?: 'default' | 'email-address' | 'number-pad';
+  keyboardType?: 'default' | 'email-address' | 'number-pad' | 'decimal-pad';
   textContentType?: 'emailAddress' | 'oneTimeCode' | 'none';
   disabled?: boolean;
   testID?: string;
