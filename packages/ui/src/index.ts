@@ -1,3 +1,8 @@
 export { Text, textStyle, type TextProps, type TextTone } from './Text';
 export { Button, type ButtonKind, type ButtonProps } from './Button';
 export { IconButton, type IconButtonProps } from './IconButton';
+export { Card, type CardProps } from './Card';
+export { TextField, type TextFieldProps } from './TextField';
+export { ListRow, type ListRowProps } from './ListRow';
+export { SegmentedControl, type SegmentedControlProps } from './SegmentedControl';
+export { Sheet, type SheetProps } from './Sheet';

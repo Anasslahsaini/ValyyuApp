@@ -1,4 +1,5 @@
 {
   "extends": "@workspace/tsconfig/react-native.json",
+  "compilerOptions": { "types": ["jest", "node"] },
   "include": ["src"]
 }

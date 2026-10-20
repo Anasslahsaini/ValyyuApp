@@ -1,1 +1,8 @@
-{}
+{
+  "a11y": {
+    "opensSettings": "Ouvre les Réglages du téléphone"
+  },
+  "common": {
+    "close": "Fermer"
+  }
+}
