@@ -5,7 +5,7 @@ Monorepo de l'app mobile (Expo) et des paquets partagés. Le document du projet,
 ## Prérequis
 
 - **Node.js 24 LTS** (`.nvmrc`)
-- **pnpm 10**, via Corepack (fourni avec Node) : `corepack enable`
+- **pnpm 10** : `npm install -g pnpm@10.34.7` (sans droits administrateur). `corepack enable` marche aussi, mais sous Windows il échoue avec `EPERM` s'il n'est pas lancé dans un terminal administrateur.
 - **Git**
 - Un iPhone ou un Android avec **Expo Go** (App Store / Play Store), sur le même Wi-Fi que l'ordinateur
 
@@ -17,10 +17,12 @@ Monorepo de l'app mobile (Expo) et des paquets partagés. Le document du projet,
 git clone https://github.com/Anasslahsaini/ValyyuApp.git
 cd ValyyuApp
 git checkout develop
-corepack enable
+npm install -g pnpm@10.34.7
 pnpm install
 pnpm --filter @workspace/mobile start
 ```
+
+Si VS Code souligne encore les imports en rouge après `pnpm install` : `Ctrl+Shift+P` → « TypeScript: Restart TS Server ».
 
 Un QR code s'affiche dans le terminal :
 
