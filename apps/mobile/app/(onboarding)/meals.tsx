@@ -31,7 +31,7 @@ export default function Meals() {
     }
   };
   const next = () => {
-    router.push('/sport');
+    router.push('/training');
   };
   return (
     <StepScreen

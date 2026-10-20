@@ -18,7 +18,7 @@ import Goal from '../app/(onboarding)/goal';
 import Health from '../app/(onboarding)/health';
 import Meals from '../app/(onboarding)/meals';
 import Plan from '../app/(onboarding)/plan';
-import Sport from '../app/(onboarding)/sport';
+import Training from '../app/(onboarding)/training';
 import Start from '../app/(onboarding)/start';
 import You from '../app/(onboarding)/you';
 
@@ -34,7 +34,12 @@ const routes = {
   '(onboarding)/health': Health,
   '(onboarding)/goal': Goal,
   '(onboarding)/meals': Meals,
-  '(onboarding)/sport': Sport,
+  '(onboarding)/training': Training,
+  // The tabs exist next to the first launch: a step must never share a URL with a tab (it would open the tab).
+  '(tabs)/sport/index': () => null,
+  '(tabs)/repas/index': () => null,
+  '(tabs)/style/index': () => null,
+  '(tabs)/today/index': () => null,
   '(onboarding)/plan': Plan,
 };
 
