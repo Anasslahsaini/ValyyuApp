@@ -10,7 +10,19 @@ const config: ExpoConfig = {
   userInterfaceStyle: 'light',
   ios: { bundleIdentifier: app.iosBundleId, supportsTablet: false },
   android: { package: app.androidPackage },
-  plugins: ['expo-router', 'expo-localization'],
+  plugins: [
+    'expo-router',
+    'expo-localization',
+    [
+      'expo-image-picker',
+      {
+        // System prompts (development and store builds; Expo Go shows its own). Localized per language later.
+        cameraPermission: `${app.name} utilise l'appareil photo pour photographier tes vêtements.`,
+        photosPermission: `${app.name} utilise tes photos pour ajouter tes vêtements.`,
+        microphonePermission: false,
+      },
+    ],
+  ],
 };
 
 export default config;

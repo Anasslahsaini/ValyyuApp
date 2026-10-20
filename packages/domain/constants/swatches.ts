@@ -20,4 +20,5 @@ export const swatches: Record<string, string> = {
   yellow: '#E2B93B',
   orange: '#D9752E',
 };
-export const swatchFor = (color: string) => swatches[color.trim().toLowerCase()] ?? null;
+export const swatchFor = (color: string): string | null =>
+  (swatches[color.trim().toLowerCase()] as string | undefined) ?? null;
