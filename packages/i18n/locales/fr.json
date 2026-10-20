@@ -7,7 +7,8 @@
   },
   "common": {
     "close": "Fermer",
-    "comingSoon": "À venir"
+    "comingSoon": "À venir",
+    "cancel": "Annuler"
   },
   "tabs": {
     "today": "Aujourd’hui",
@@ -21,6 +22,67 @@
   },
   "profile": {
     "title": "Profil",
-    "catalog": "Catalogue du design"
+    "catalog": "Catalogue du design",
+    "account": "Compte",
+    "signOut": "Se déconnecter",
+    "delete": {
+      "row": "Supprimer mon compte",
+      "title": "Supprimer ton compte ?",
+      "message": "Ton compte et tes données seront effacés. Si tu as un abonnement, annule-le aussi dans l'App Store.",
+      "confirm": "Supprimer",
+      "failed": "Ton compte n'a pas pu être supprimé. Rien n'a été effacé ; réessaie."
+    }
+  },
+  "auth": {
+    "welcome": {
+      "title": "Ta journée prête en 1 touche.",
+      "subtitle": "Tu montres ou tu dis. {{appName}} choisit pour toi quoi manger, quel sport faire et quoi porter.",
+      "apple": "Continuer avec Apple",
+      "appleSoon": "Connexion avec Apple : bientôt, dans la version de l'App Store.",
+      "google": "Continuer avec Google",
+      "email": "Continuer avec un e-mail",
+      "phoneLater": "Téléphone (SMS) : plus tard",
+      "legal": "En continuant, tu acceptes nos Conditions d'utilisation et notre Politique de confidentialité."
+    },
+    "email": {
+      "title": "Ton e-mail",
+      "subtitle": "On t'envoie un code à 6 chiffres. Pas de mot de passe à retenir.",
+      "label": "Adresse e-mail",
+      "submit": "Recevoir le code"
+    },
+    "offline": {
+      "title": "Pas de connexion",
+      "message": "Vérifie ton Wi-Fi ou tes données mobiles, puis réessaie.",
+      "retry": "Réessayer"
+    },
+    "code": {
+      "title": "Entre le code",
+      "sentTo": "On l'a envoyé à {{email}}",
+      "changeEmail": "Modifier l'adresse",
+      "label": "Code à 6 chiffres",
+      "verifying": "Vérification…",
+      "spam": "Rien reçu ? Regarde dans les courriers indésirables.",
+      "resendIn": "Renvoyer le code dans {{seconds}} s",
+      "resend": "Renvoyer le code"
+    },
+    "linked": {
+      "title": "Tu as déjà un compte",
+      "message": "L'adresse {{email}} est liée à Google. Continue avec Google pour retrouver ton plan.",
+      "viaGoogle": "via Google",
+      "useEmail": "Recevoir un code par e-mail à la place"
+    },
+    "errors": {
+      "invalidEmail": "Il manque une partie de l'adresse (ex. : .fr).",
+      "wrongCode": "Ce code ne marche pas. Vérifie les chiffres, ou demande un nouveau code.",
+      "expired": "Ce code a expiré. Demande un nouveau code.",
+      "network": "Pas de connexion. Vérifie ton réseau, puis réessaie.",
+      "linkedGoogle": "Cette adresse se connecte avec Google.",
+      "rateLimited": "Trop d'essais. Attends une minute avant de réessayer.",
+      "unknown": "Ça n'a pas marché. Réessaie dans un instant."
+    },
+    "missingConfig": {
+      "title": "Connexion non configurée",
+      "message": "Ajoute la clé publique Clerk dans apps/mobile/.env (voir .env.example), puis relance l'app."
+    }
   }
 }
