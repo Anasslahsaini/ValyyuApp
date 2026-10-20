@@ -4,6 +4,15 @@ settings:
   autoInstallPeers: false
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    typescript:
+      specifier: ~6.0.3
+      version: 6.0.3
+    vitest:
+      specifier: ^5.0.0
+      version: 5.0.5
+
 importers:
 
   .:
@@ -43,6 +52,21 @@ importers:
         version: 8.3.4(@types/node@24.19.2)
       vitest:
         specifier: ^5.0.0
+        version: 5.0.5(@types/node@24.19.2)(vite@8.3.4(@types/node@24.19.2))
+
+  packages/config:
+    devDependencies:
+      '@types/node':
+        specifier: ^24.0.0
+        version: 24.19.2
+      '@workspace/tsconfig':
+        specifier: workspace:*
+        version: link:../tsconfig
+      typescript:
+        specifier: 'catalog:'
+        version: 6.0.3
+      vitest:
+        specifier: 'catalog:'
         version: 5.0.5(@types/node@24.19.2)(vite@8.3.4(@types/node@24.19.2))
 
   packages/tsconfig: {}
