@@ -1,6 +1,6 @@
 import { color, radius, size, space } from '@workspace/tokens';
-import { useId } from 'react';
-import { StyleSheet, TextInput, View } from 'react-native';
+import { useEffect, useRef } from 'react';
+import { AccessibilityInfo, StyleSheet, TextInput, View } from 'react-native';
 import { Text, textStyle } from './Text';
 
 export type TextFieldProps = {
@@ -30,15 +30,19 @@ export function TextField({
   disabled = false,
   testID,
 }: TextFieldProps) {
-  const id = useId();
+  const previousErrorRef = useRef(error);
+  useEffect(() => {
+    // accessibilityLiveRegion only works on Android: announce new errors explicitly for VoiceOver.
+    if (error && error !== previousErrorRef.current) AccessibilityInfo.announceForAccessibility(error);
+    previousErrorRef.current = error;
+  }, [error]);
   return (
     <View style={styles.wrapper}>
-      <Text variant="subhead" tone="secondary">
+      <Text variant="subhead" tone="secondary" hiddenFromScreenReaders>
         {label}
       </Text>
       <View style={[styles.field, error ? styles.fieldError : null, disabled && styles.disabled]}>
         <TextInput
-          nativeID={id}
           accessibilityLabel={label}
           {...(error ? { accessibilityHint: error } : help ? { accessibilityHint: help } : {})}
           accessibilityState={{ disabled }}

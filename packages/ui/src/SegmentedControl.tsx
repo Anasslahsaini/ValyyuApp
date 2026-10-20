@@ -1,4 +1,4 @@
-import { color, radius, space } from '@workspace/tokens';
+import { color, radius, size, space } from '@workspace/tokens';
 import { Pressable, StyleSheet, View } from 'react-native';
 import { Text } from './Text';
 
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   },
   segment: {
     flexGrow: 1,
-    minHeight: 40,
+    minHeight: size.touchMin,
     minWidth: 64,
     alignItems: 'center',
     justifyContent: 'center',

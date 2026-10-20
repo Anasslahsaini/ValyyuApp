@@ -1,4 +1,4 @@
-import { color, space } from '@workspace/tokens';
+import { color, size, space } from '@workspace/tokens';
 import { useTranslation } from 'react-i18next';
 import { I18nManager, Pressable, StyleSheet, View } from 'react-native';
 import { Text } from './Text';
@@ -16,8 +16,9 @@ export type ListRowProps = {
 function Chevron() {
   return (
     <View
+      testID="chevron"
       importantForAccessibility="no-hide-descendants"
-      style={[styles.chevron, I18nManager.isRTL && styles.chevronRtl]}
+      style={[styles.chevron, { transform: [{ rotate: I18nManager.isRTL ? '-45deg' : '45deg' }] }]}
     />
   );
 }
@@ -64,7 +65,7 @@ export function ListRow({
 
 const styles = StyleSheet.create({
   row: {
-    minHeight: 52,
+    minHeight: size.buttonHeight,
     flexDirection: 'row',
     alignItems: 'center',
     gap: space[3],
@@ -80,7 +81,5 @@ const styles = StyleSheet.create({
     borderTopWidth: 2,
     borderEndWidth: 2,
     borderColor: color.ink.secondary,
-    transform: [{ rotate: '45deg' }],
   },
-  chevronRtl: { transform: [{ rotate: '-135deg' }] },
 });

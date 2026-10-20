@@ -1,4 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react-native';
+import { StyleSheet } from 'react-native';
 import { SegmentedControl } from '../index';
 
 const options = [
@@ -45,5 +46,18 @@ describe('SegmentedControl', () => {
         <SegmentedControl options={many} value="v0" onChange={() => undefined} accessibilityLabel="x" />,
       ),
     ).rejects.toThrow(/2 to 4/);
+  });
+
+  it('gives every segment a 44 pt touch target', async () => {
+    await render(
+      <SegmentedControl
+        options={options}
+        value="frigo"
+        onChange={() => undefined}
+        accessibilityLabel="Vue des repas"
+      />,
+    );
+    for (const tab of screen.getAllByRole('tab'))
+      expect(StyleSheet.flatten(tab.props.style).minHeight).toBeGreaterThanOrEqual(44);
   });
 });

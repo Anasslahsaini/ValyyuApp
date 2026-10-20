@@ -70,9 +70,11 @@ export function Button({
       ) : icon ? (
         <View importantForAccessibility="no">{icon}</View>
       ) : null}
-      <Text variant="headline" color={k.label}>
-        {label}
-      </Text>
+      <View style={styles.label} {...(testID ? { testID: `${testID}-label` } : {})}>
+        <Text variant="headline" color={k.label} align="center">
+          {label}
+        </Text>
+      </View>
     </Pressable>
   );
 }
@@ -88,5 +90,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: space[2],
   },
+  label: { flexShrink: 1 },
   disabled: { opacity: 0.4 },
 });

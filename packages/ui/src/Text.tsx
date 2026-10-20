@@ -12,6 +12,9 @@ export type TextProps = {
   /** Overrides the tone with a design-system color (e.g. a button label). */
   color?: string;
   accessibilityRole?: 'header' | 'text';
+  align?: 'auto' | 'center';
+  /** Hide from screen readers when another element already speaks this text. */
+  hiddenFromScreenReaders?: boolean;
   children: ReactNode;
 };
 
@@ -40,16 +43,22 @@ export function Text({
   numeric = false,
   color: override,
   accessibilityRole,
+  align = 'auto',
+  hiddenFromScreenReaders = false,
   children,
 }: TextProps) {
   return (
     <RNText
       allowFontScaling
       {...(accessibilityRole ? { accessibilityRole } : {})}
+      {...(hiddenFromScreenReaders
+        ? { accessibilityElementsHidden: true, importantForAccessibility: 'no-hide-descendants' as const }
+        : {})}
       style={[
         textStyle(variant),
         { color: override ?? toneColor[tone] },
         numeric && { fontVariant: ['tabular-nums'] },
+        align === 'center' && { textAlign: 'center' },
       ]}
     >
       {children}

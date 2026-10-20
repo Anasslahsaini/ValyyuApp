@@ -1,21 +1,31 @@
-import { BricolageGrotesque_700Bold, useFonts } from '@expo-google-fonts/bricolage-grotesque';
-import { initI18n } from '@workspace/i18n';
 import { color } from '@workspace/tokens';
-import { getLocales } from 'expo-localization';
-import { Stack } from 'expo-router';
+import { Stack, useRouter } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { CloseButton } from '../src/navigation/CloseButton';
 import { largeTitleOptions } from '../src/navigation/stack-options';
+import { useAppReady } from '../src/useAppReady';
 
 function RootStack() {
   const { t } = useTranslation();
+  const router = useRouter();
   return (
     <Stack screenOptions={{ contentStyle: { backgroundColor: color.bg.paper } }}>
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       <Stack.Screen
         name="profile"
-        options={{ ...largeTitleOptions, title: t('profile.title'), presentation: 'modal' }}
+        options={{
+          ...largeTitleOptions,
+          title: t('profile.title'),
+          presentation: 'modal',
+          headerRight: () => (
+            <CloseButton
+              onPress={() => {
+                router.back();
+              }}
+            />
+          ),
+        }}
       />
       <Stack.Screen name="(community)" options={{ headerShown: false }} />
       <Stack.Screen name="dev" options={{ headerShown: false }} />
@@ -24,16 +34,8 @@ function RootStack() {
 }
 
 export default function RootLayout() {
-  const [fontsLoaded] = useFonts({ BricolageGrotesque_700Bold });
-  const [i18nReady, setI18nReady] = useState(false);
-
-  useEffect(() => {
-    void initI18n(getLocales().map((locale) => locale.languageCode)).then(() => {
-      setI18nReady(true);
-    });
-  }, []);
-
-  if (!fontsLoaded || !i18nReady) return null;
+  const ready = useAppReady();
+  if (!ready) return null;
   return (
     <>
       <StatusBar style="dark" />

@@ -35,7 +35,7 @@ describe('Button', () => {
     });
   });
 
-  it('grows with large text instead of truncating (font scale 3.1)', async () => {
+  it('keeps the growth contract: no fixed height, no line limit', async () => {
     const label = 'Continuer avec un e-mail et recevoir un code à six chiffres pour se connecter vite';
     await render(<Button label={label} onPress={() => undefined} testID="b" />);
     const style = StyleSheet.flatten(screen.getByTestId('b').props.style);
@@ -43,5 +43,15 @@ describe('Button', () => {
     expect(style.minHeight).toBe(size.buttonHeight);
     expect(screen.getByText(label).props.numberOfLines).toBeUndefined();
     expect(screen.getByText(label).props.allowFontScaling).not.toBe(false);
+  });
+
+  it.each([
+    ['loading', { loading: true }],
+    ['with an icon', { icon: null as unknown as React.ReactNode }],
+  ] as const)('lets a long label wrap beside the spinner or icon (%s)', async (_case, props) => {
+    const label = 'Continuer avec un e-mail et recevoir un code à six chiffres pour se connecter vite';
+    await render(<Button label={label} onPress={() => undefined} testID="b" {...props} />);
+    expect(StyleSheet.flatten(screen.getByTestId('b-label').props.style)).toMatchObject({ flexShrink: 1 });
+    expect(StyleSheet.flatten(screen.getByText(label).props.style).textAlign).toBe('center');
   });
 });
