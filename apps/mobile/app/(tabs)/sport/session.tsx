@@ -35,7 +35,7 @@ export default function SessionScreen() {
     params.minutes ? Number(params.minutes) : undefined,
   );
   const [session, setSession] = useState<Session>(() => startSession(workout, state.sessions, settings));
-  const [rest, setRest] = useState<{ until: number; left: number } | null>(null);
+  const [rest, setRest] = useState<{ until: number; remaining: number } | null>(null);
   const [open, setOpen] = useState<string | null>(null);
   const { busy, failed, run } = useRun<'finish'>();
   const [nothingDone, setNothingDone] = useState(false);
@@ -44,9 +44,9 @@ export default function SessionScreen() {
   useEffect(() => {
     if (!rest) return;
     const timer = setInterval(() => {
-      const left = Math.max(0, Math.round((rest.until - Date.now()) / 1000));
-      if (left === 0) setRest(null);
-      else setRest({ until: rest.until, left });
+      const remaining = Math.max(0, Math.round((rest.until - Date.now()) / 1000));
+      if (remaining === 0) setRest(null);
+      else setRest({ until: rest.until, remaining });
     }, 1000);
     return () => {
       clearInterval(timer);
@@ -72,7 +72,7 @@ export default function SessionScreen() {
     setNothingDone(false);
     if (!setEntry.completed) {
       const seconds = session.exercises[ei]?.restSeconds ?? 90;
-      setRest({ until: Date.now() + seconds * 1000, left: seconds });
+      setRest({ until: Date.now() + seconds * 1000, remaining: seconds });
     }
   };
   const addSet = (ei: number) => {
@@ -242,7 +242,7 @@ export default function SessionScreen() {
             <Icon sf="timer" md="timer" color={color.ink.primary} size={20} />
             <View style={styles.flex}>
               <Text variant="headline" numeric>
-                {t('sport.restLeft', { time: clock(rest.left) })}
+                {t('sport.restLeft', { time: clock(rest.remaining) })}
               </Text>
             </View>
             <IconButton
