@@ -1,8 +1,26 @@
 {
   "a11y": {
-    "opensSettings": "Ouvre les Réglages du téléphone"
+    "opensSettings": "Ouvre les Réglages du téléphone",
+    "micro": "Micro. Parle ou écris à {{appName}}",
+    "profile": "Profil et réglages",
+    "community": "Communauté"
   },
   "common": {
-    "close": "Fermer"
+    "close": "Fermer",
+    "comingSoon": "À venir"
+  },
+  "tabs": {
+    "today": "Aujourd’hui",
+    "repas": "Repas",
+    "sport": "Sport",
+    "style": "Style",
+    "micro": "Micro"
+  },
+  "micro": {
+    "soon": "Le micro arrive bientôt."
+  },
+  "profile": {
+    "title": "Profil",
+    "catalog": "Catalogue du design"
   }
 }

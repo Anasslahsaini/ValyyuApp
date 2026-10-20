@@ -1,2 +1,2 @@
-export { app } from './app';
-export { features } from './features';
+export { app } from './app.ts';
+export { features } from './features.ts';

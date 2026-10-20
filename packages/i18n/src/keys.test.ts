@@ -10,6 +10,10 @@ describe('extractKeys', () => {
     expect(extractKeys(source).sort()).toEqual(['a11y.micro', 'common.close', 'tabs.today']);
   });
 
+  it('finds keys declared with the tKey() marker', () => {
+    expect(extractKeys(`const tab = { labelKey: tKey('tabs.today') };`)).toEqual(['tabs.today']);
+  });
+
   it('ignores dynamic keys', () => {
     expect(extractKeys('t(key); t(`tabs.${x}`)')).toEqual([]);
   });
