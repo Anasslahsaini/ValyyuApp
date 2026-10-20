@@ -52,7 +52,7 @@ La CI GitHub Actions lance les quatre sur Ubuntu et Windows à chaque PR.
 
 | Dossier             | Rôle                                                                                                   | Tests     |
 | ------------------- | ------------------------------------------------------------------------------------------------------ | --------- |
-| `apps/mobile`       | App Expo SDK 58, expo-router, onglets natifs                                                           | jest-expo |
+| `apps/mobile`       | App Expo SDK 57, expo-router, onglets natifs                                                           | jest-expo |
 | `packages/config`   | Nom de l'app, identifiants des stores, interrupteurs (`features`)                                      | Vitest    |
 | `packages/tokens`   | Valeurs du design system v1 + calcul des contrastes WCAG                                               | Vitest    |
 | `packages/ui`       | 8 composants accessibles (Text, Button, IconButton, Card, TextField, ListRow, SegmentedControl, Sheet) | jest-expo |

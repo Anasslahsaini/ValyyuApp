@@ -156,7 +156,7 @@ Le style de l'app est validé. **On améliore, on ne refait pas.**
 
 | Dossier           | Rôle                                                   |
 | ----------------- | ------------------------------------------------------ |
-| `apps/mobile`     | L'app Expo (SDK 58, expo-router, onglets natifs)       |
+| `apps/mobile`     | L'app Expo (SDK 57, expo-router, onglets natifs)       |
 | `packages/config` | Le nom de l'app et ses identifiants, à un seul endroit |
 | `packages/tokens` | Les valeurs du design (couleurs, tailles, espaces)     |
 | `packages/ui`     | Les composants de base (boutons, champs, cartes…)      |

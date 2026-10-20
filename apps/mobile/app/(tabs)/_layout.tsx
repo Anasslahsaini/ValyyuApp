@@ -1,5 +1,5 @@
 import { color } from '@workspace/tokens';
-import { NativeTabs } from 'expo-router/native-tabs';
+import { NativeTabs } from 'expo-router/unstable-native-tabs';
 import { useTranslation } from 'react-i18next';
 import { TABS } from '../../src/navigation/tabs';
 

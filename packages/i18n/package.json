@@ -22,7 +22,7 @@
     "@types/node": "^24.0.0",
     "@types/react": "~19.2.0",
     "@workspace/tsconfig": "workspace:*",
-    "react": "19.3.0",
+    "react": "19.2.3",
     "typescript": "catalog:",
     "vitest": "catalog:"
   }
