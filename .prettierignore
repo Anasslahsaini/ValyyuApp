@@ -3,3 +3,4 @@ dist/
 .expo/
 coverage/
 docs/
+packages/domain/data/

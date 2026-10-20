@@ -1,0 +1,10 @@
+{
+  "extends": "@workspace/tsconfig/base.json",
+  "compilerOptions": {
+    "types": ["node"],
+    "noUncheckedIndexedAccess": false,
+    "exactOptionalPropertyTypes": false,
+    "allowJs": true
+  },
+  "include": ["src", "constants", "data/**/*.json"]
+}

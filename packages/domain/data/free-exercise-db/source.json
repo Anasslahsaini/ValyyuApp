@@ -1,0 +1,22 @@
+{
+  "repository": "https://github.com/yuhonas/free-exercise-db",
+  "revision": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+  "license": "Unlicense",
+  "count": 876,
+  "sourceSha256": "5bb747e3fc658f095a60dcbf6d53c96627acdcc6ffb6fffde86f7e26995d40bf",
+  "imageMetadata": "image-sizes.json",
+  "imageLicense": "Unlicense — repository public-domain dataset declaration; no separate image license declared",
+  "imageLicenseEvidence": "https://raw.githubusercontent.com/yuhonas/free-exercise-db/f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5/README.md",
+  "missingInstructions": [
+    "Iron_Cross",
+    "One-Arm_Kettlebell_Swings",
+    "Push_Press",
+    "Side_Bridge",
+    "Side_Jackknife"
+  ],
+  "missingImages": [
+    "Kettlebell_Halo",
+    "Kettlebell_Halo_With_Overhead_Extension",
+    "Kettlebell_Overhead_Triceps_Extension"
+  ]
+}

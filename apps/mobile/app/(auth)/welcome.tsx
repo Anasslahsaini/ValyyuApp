@@ -77,7 +77,7 @@ export default function Welcome() {
 }
 
 const styles = StyleSheet.create({
-  content: { padding: layout.margin, paddingTop: space[12], gap: layout.gapSection, flexGrow: 1 },
-  hero: { gap: space[3], marginTop: space[10] },
-  actions: { gap: space[3], marginTop: 'auto' },
+  content: { padding: layout.margin, paddingTop: space[12], gap: layout.gapSection },
+  hero: { gap: space[3], marginTop: space[8] },
+  actions: { gap: space[3] },
 });

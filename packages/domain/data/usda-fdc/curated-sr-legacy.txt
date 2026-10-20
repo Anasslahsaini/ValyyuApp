@@ -1,0 +1,354 @@
+# Curated fallback: common generic foods, values per 100 g transcribed from USDA FoodData Central
+# SR Legacy (April 2018) descriptions. Public domain (U.S. Government work, CC0 1.0).
+# Used by scripts/import-usda.mjs when the bulk download is unreachable. Verify by running the
+# importer with network access; the bulk import replaces these rows.
+# id|name|French name|kcal|protein|carbs|fat|portions (label=grams;...)
+egg-whole-raw|Egg, whole, raw, fresh|Œuf entier, cru|143|12.6|0.72|9.51|1 large=50;1 medium=44;1 extra large=56
+egg-whole-boiled|Egg, whole, cooked, hard-boiled|Œuf dur|155|12.6|1.12|10.6|1 large=50
+egg-whole-fried|Egg, whole, cooked, fried|Œuf au plat|196|13.6|0.83|14.8|1 large=46
+egg-scrambled|Egg, whole, cooked, scrambled|Œufs brouillés|149|9.99|1.61|11|1 large=61
+egg-white-raw|Egg, white, raw, fresh|Blanc d'œuf, cru|52|10.9|0.73|0.17|1 large=33
+egg-yolk-raw|Egg, yolk, raw, fresh|Jaune d'œuf, cru|322|15.9|3.59|26.5|1 large=17
+milk-whole|Milk, whole, 3.25% milkfat|Lait entier|61|3.15|4.8|3.25|1 cup=244;1 glass=250
+milk-2pct|Milk, reduced fat, 2% milkfat|Lait demi-écrémé|50|3.3|4.8|1.98|1 cup=244;1 glass=250
+milk-skim|Milk, nonfat, fluid (skim)|Lait écrémé|34|3.37|4.96|0.08|1 cup=245;1 glass=250
+yogurt-plain-whole|Yogurt, plain, whole milk|Yaourt nature, lait entier|61|3.47|4.66|3.25|1 container=170;1 pot=125
+yogurt-plain-lowfat|Yogurt, plain, low fat|Yaourt nature, allégé|63|5.25|7.04|1.55|1 container=170;1 pot=125
+yogurt-greek-nonfat|Yogurt, Greek, plain, nonfat|Yaourt grec nature, 0%|59|10.2|3.6|0.39|1 container=170
+yogurt-greek-whole|Yogurt, Greek, plain, whole milk|Yaourt grec nature|97|9|3.98|5|1 container=170
+yogurt-fruit-lowfat|Yogurt, fruit, low fat|Yaourt aux fruits|99|3.98|18.6|1.15|1 container=170;1 pot=125
+cheese-cheddar|Cheese, cheddar|Cheddar|403|24.9|1.28|33.1|1 slice=28;1 oz=28
+cheese-mozzarella|Cheese, mozzarella, whole milk|Mozzarella|300|22.2|2.19|22.4|1 ball=125;1 oz=28
+cheese-parmesan|Cheese, parmesan, hard|Parmesan|392|35.8|3.22|25.8|1 tbsp grated=5;1 oz=28
+cheese-feta|Cheese, feta|Feta|264|14.2|4.09|21.3|1 oz=28;1 cup crumbled=150
+cheese-swiss|Cheese, swiss|Emmental|380|27|1.44|27.8|1 slice=28
+cheese-brie|Cheese, brie|Brie|334|20.8|0.45|27.7|1 oz=28
+cheese-camembert|Cheese, camembert|Camembert|300|19.8|0.46|24.3|1 wedge=38
+cheese-goat-soft|Cheese, goat, soft type|Fromage de chèvre frais|264|18.5|0|21.1|1 oz=28
+cheese-cottage|Cheese, cottage, lowfat, 2% milkfat|Cottage cheese|81|10.5|4.76|2.27|1 cup=226
+cheese-cream|Cheese, cream|Fromage à la crème|342|5.93|4.07|34.2|1 tbsp=14.5
+cheese-ricotta|Cheese, ricotta, whole milk|Ricotta|174|11.3|3.04|13|1 cup=246
+fromage-blanc|Cheese, quark-style fresh, low fat (fromage blanc)|Fromage blanc|73|8|4|2.9|1 pot=100|~
+butter-salted|Butter, salted|Beurre demi-sel|717|0.85|0.06|81.1|1 tbsp=14.2;1 pat=5
+butter-unsalted|Butter, without salt|Beurre doux|717|0.85|0.06|81.1|1 tbsp=14.2;1 pat=5
+cream-heavy|Cream, fluid, heavy whipping|Crème liquide entière|340|2.84|2.84|36.1|1 tbsp=15
+cream-sour|Cream, sour, cultured|Crème aigre|198|2.44|4.63|19.4|1 tbsp=12
+creme-fraiche|Cream, crème fraîche (cultured, 30% fat)|Crème fraîche|292|2.4|2.9|30|1 tbsp=15|~
+ice-cream-vanilla|Ice creams, vanilla|Glace vanille|207|3.5|23.6|11|1 scoop=66;1/2 cup=66
+chicken-breast-raw|Chicken, broilers or fryers, breast, meat only, raw|Blanc de poulet, cru|120|22.5|0|2.62|1 breast=174
+chicken-breast-roasted|Chicken, broilers or fryers, breast, meat only, cooked, roasted|Blanc de poulet, rôti|165|31|0|3.57|1 breast=172;1 cup diced=140
+chicken-thigh-roasted|Chicken, broilers or fryers, thigh, meat only, cooked, roasted|Cuisse de poulet, rôtie|209|26|0|10.9|1 thigh=52
+chicken-drumstick-roasted|Chicken, drumstick, meat and skin, cooked, roasted|Pilon de poulet, rôti|216|27|0|11.2|1 drumstick=52
+chicken-wing-roasted|Chicken, wing, meat and skin, cooked, roasted|Aile de poulet, rôtie|290|26.9|0|19.5|1 wing=34
+chicken-whole-roasted|Chicken, broilers or fryers, meat and skin, cooked, roasted|Poulet rôti (avec peau)|239|27.3|0|13.6|
+turkey-breast-roasted|Turkey, breast, meat only, cooked, roasted|Blanc de dinde, rôti|147|30.1|0|2.08|1 slice=28
+turkey-ground-cooked|Turkey, ground, cooked|Dinde hachée, cuite|203|27.4|0|10.4|
+beef-ground-85-raw|Beef, ground, 85% lean meat / 15% fat, raw|Bœuf haché 15%, cru|215|18.6|0|15|1 patty=113
+beef-ground-85-cooked|Beef, ground, 85% lean meat / 15% fat, patty, cooked, broiled|Steak haché 15%, cuit|250|25.9|0|15.4|1 patty=85
+beef-ground-95-cooked|Beef, ground, 95% lean meat / 5% fat, patty, cooked, broiled|Steak haché 5%, cuit|164|25.4|0|6.4|1 patty=85
+beef-sirloin-cooked|Beef, top sirloin, steak, lean, cooked, broiled|Faux-filet, grillé|180|30.4|0|5.56|1 steak=170
+beef-ribeye-cooked|Beef, rib eye, steak, lean and fat, cooked, grilled|Entrecôte, grillée|291|24.2|0|20.8|1 steak=200
+beef-tenderloin-cooked|Beef, tenderloin, steak, lean, cooked, broiled|Filet de bœuf, grillé|201|29.9|0|8.15|1 steak=150
+beef-stew-meat-cooked|Beef, chuck, stew meat, cooked, braised|Bœuf à braiser, cuit|217|33.5|0|8.2|
+pork-chop-cooked|Pork, loin, chop, lean, cooked, broiled|Côte de porc, grillée|209|29.5|0|9.21|1 chop=145
+pork-tenderloin-cooked|Pork, tenderloin, lean, cooked, roasted|Filet mignon de porc, rôti|143|26.2|0|3.51|
+pork-ground-cooked|Pork, ground, cooked|Porc haché, cuit|297|25.7|0|20.8|
+bacon-cooked|Pork, cured, bacon, cooked, pan-fried|Bacon, cuit|541|37|1.43|41.8|1 slice=8
+ham-sliced|Ham, sliced, regular (approximately 11% fat)|Jambon blanc|163|16.6|3.83|8.6|1 slice=28
+prosciutto|Pork, cured, ham, prosciutto (dry-cured)|Jambon cru|250|26|0.3|16|1 slice=15
+sausage-pork-cooked|Sausage, pork, cooked|Saucisse de porc, cuite|325|19.4|1.4|27|1 link=68
+salami|Salami, dry or hard, pork|Saucisson sec|407|22.6|1.6|33.7|1 slice=10
+hot-dog|Frankfurter, beef and pork|Saucisse de Francfort|305|11.5|2.42|27.6|1 frank=45
+chorizo|Chorizo, pork and beef|Chorizo|455|24.1|1.86|38.3|1 slice=6
+lamb-leg-cooked|Lamb, leg, whole, lean and fat, cooked, roasted|Gigot d'agneau, rôti|258|25.6|0|16.5|
+lamb-chop-cooked|Lamb, loin, chop, lean and fat, cooked, broiled|Côtelette d'agneau, grillée|294|25.5|0|20.6|1 chop=70
+veal-cutlet-cooked|Veal, leg (top round), lean, cooked, braised|Escalope de veau, cuite|203|36.2|0|5.33|
+duck-roasted|Duck, domesticated, meat only, cooked, roasted|Canard, rôti (sans peau)|201|23.5|0|11.2|
+liver-beef-cooked|Beef, liver, cooked, pan-fried|Foie de bœuf, poêlé|175|26.5|5.16|4.68|
+salmon-atlantic-raw|Fish, salmon, Atlantic, farmed, raw|Saumon, cru|208|20.4|0|13.4|1 fillet=170
+salmon-atlantic-cooked|Fish, salmon, Atlantic, farmed, cooked, dry heat|Saumon, cuit|206|22.1|0|12.4|1 fillet=154
+salmon-smoked|Fish, salmon, chinook, smoked (lox)|Saumon fumé|117|18.3|0|4.32|1 slice=20
+tuna-canned-water|Fish, tuna, light, canned in water, drained solids|Thon au naturel, en boîte|116|25.5|0|0.82|1 can=165
+tuna-canned-oil|Fish, tuna, light, canned in oil, drained solids|Thon à l'huile, en boîte|198|29.1|0|8.21|1 can=140
+tuna-fresh-cooked|Fish, tuna, yellowfin, fresh, cooked, dry heat|Thon frais, cuit|130|29.2|0|0.59|
+cod-cooked|Fish, cod, Atlantic, cooked, dry heat|Cabillaud, cuit|105|22.8|0|0.86|1 fillet=180
+tilapia-cooked|Fish, tilapia, cooked, dry heat|Tilapia, cuit|128|26.2|0|2.65|1 fillet=87
+trout-cooked|Fish, trout, rainbow, farmed, cooked, dry heat|Truite, cuite|168|23.8|0|7.38|1 fillet=71
+sardines-canned-oil|Fish, sardine, Atlantic, canned in oil, drained solids with bone|Sardines à l'huile|208|24.6|0|11.5|1 can=92;1 sardine=12
+mackerel-cooked|Fish, mackerel, Atlantic, cooked, dry heat|Maquereau, cuit|262|23.9|0|17.8|1 fillet=88
+herring-pickled|Fish, herring, Atlantic, pickled|Hareng mariné|262|14.2|9.64|18|
+anchovy-canned-oil|Fish, anchovy, European, canned in oil, drained solids|Anchois à l'huile|210|28.9|0|9.71|1 anchovy=4
+shrimp-cooked|Crustaceans, shrimp, cooked|Crevettes, cuites|99|24|0.2|0.28|1 large=5.5;3 oz=85
+crab-cooked|Crustaceans, crab, blue, cooked, moist heat|Crabe, cuit|83|17.9|0|0.74|
+lobster-cooked|Crustaceans, lobster, northern, cooked, moist heat|Homard, cuit|89|19|0|0.86|
+mussels-cooked|Mollusks, mussel, blue, cooked, moist heat|Moules, cuites|172|23.8|7.39|4.48|1 cup=150
+scallops-cooked|Mollusks, scallop, cooked, steamed|Saint-Jacques, cuites|111|20.5|5.41|0.84|
+squid-fried|Mollusks, squid, mixed species, cooked, fried|Calamars frits|175|17.9|7.79|7.48|
+fish-sticks|Fish sticks, frozen, prepared|Bâtonnets de poisson|277|11|23.5|15.6|1 stick=28
+tofu-firm|Tofu, firm, prepared with calcium sulfate|Tofu ferme|144|17.3|2.78|8.72|1/2 cup=126
+tofu-silken|Tofu, soft, silken|Tofu soyeux|55|4.8|2.9|2.7|1 slice=84|~
+tempeh|Tempeh|Tempeh|192|20.3|7.64|10.8|1 cup=166
+seitan|Seitan (wheat gluten), prepared|Seitan|141|25|6|1.9||~
+rice-white-cooked|Rice, white, long-grain, regular, enriched, cooked|Riz blanc, cuit|130|2.69|28.2|0.28|1 cup=158;1 portion=150
+rice-white-raw|Rice, white, long-grain, regular, raw, enriched|Riz blanc, cru|365|7.13|80|0.66|1 cup=185;1 portion=75
+rice-brown-cooked|Rice, brown, long-grain, cooked|Riz complet, cuit|123|2.74|25.6|0.97|1 cup=202
+rice-basmati-cooked|Rice, white, basmati, cooked|Riz basmati, cuit|121|3.5|25.2|0.4|1 cup=163|~
+rice-jasmine-cooked|Rice, white, jasmine, cooked|Riz jasmin, cuit|129|2.7|28|0.3|1 cup=158|~
+rice-wild-cooked|Wild rice, cooked|Riz sauvage, cuit|101|3.99|21.3|0.34|1 cup=164
+pasta-cooked|Pasta, cooked, enriched, without added salt|Pâtes, cuites|158|5.8|30.9|0.93|1 cup=140;1 portion=200
+pasta-dry|Pasta, dry, enriched|Pâtes, sèches|371|13|74.7|1.51|1 portion=80;2 oz=56
+pasta-whole-wheat-cooked|Pasta, whole-wheat, cooked|Pâtes complètes, cuites|149|5.99|30.1|1.71|1 cup=140
+egg-noodles-cooked|Noodles, egg, cooked, enriched|Nouilles aux œufs, cuites|138|4.54|25.2|2.07|1 cup=160
+rice-noodles-cooked|Noodles, rice, cooked|Nouilles de riz, cuites|108|1.79|24|0.2|1 cup=176
+ramen-instant|Soup, ramen noodle, dry, any flavor|Nouilles instantanées (sèches)|440|10.2|60.3|17.6|1 package=85
+couscous-cooked|Couscous, cooked|Couscous, cuit|112|3.79|23.2|0.16|1 cup=157
+quinoa-cooked|Quinoa, cooked|Quinoa, cuit|120|4.4|21.3|1.92|1 cup=185
+bulgur-cooked|Bulgur, cooked|Boulgour, cuit|83|3.08|18.6|0.24|1 cup=182
+oats-rolled|Oats (rolled, dry)|Flocons d'avoine|389|16.9|66.3|6.9|1/2 cup=40;1 tbsp=5
+oatmeal-cooked|Cereals, oats, regular and quick, cooked with water|Porridge à l'eau|71|2.54|12|1.52|1 cup=234
+granola|Cereals ready-to-eat, granola, homemade|Granola|489|13.7|53.9|24.3|1/2 cup=61
+muesli|Cereals ready-to-eat, muesli, dried fruit and nuts|Muesli|363|9.7|73|5.8|1 cup=85
+corn-flakes|Cereals ready-to-eat, corn flakes|Corn flakes|357|7.5|84.1|0.4|1 cup=28
+bread-white|Bread, white, commercially prepared|Pain de mie blanc|266|7.64|50.6|3.29|1 slice=25
+bread-whole-wheat|Bread, whole-wheat, commercially prepared|Pain complet|252|12.4|42.7|3.5|1 slice=32
+bread-baguette|Bread, french or vienna (includes sourdough)|Baguette|272|10.8|51.9|2.42|1 slice=25;1/4 baguette=60
+bread-rye|Bread, rye|Pain de seigle|259|8.5|48.3|3.3|1 slice=32
+bread-multigrain|Bread, multi-grain|Pain multicéréales|265|13.4|43.3|4.23|1 slice=26
+bagel-plain|Bagels, plain, enriched|Bagel nature|257|10|50.5|1.6|1 bagel=105
+pita-white|Bread, pita, white, enriched|Pain pita|275|9.1|55.7|1.2|1 pita=60
+tortilla-flour|Tortillas, ready-to-bake or -fry, flour|Tortilla de blé|306|8.04|50.6|7.97|1 tortilla=45
+tortilla-corn|Tortillas, ready-to-bake or -fry, corn|Tortilla de maïs|218|5.7|44.6|2.85|1 tortilla=26
+croissant-butter|Croissants, butter|Croissant au beurre|406|8.2|45.8|21|1 croissant=57
+pain-au-chocolat|Pastry, chocolate-filled croissant (pain au chocolat)|Pain au chocolat|414|7.4|45|22.8|1 piece=60|~
+english-muffin|English muffins, plain, enriched|Muffin anglais|227|8.87|44.2|1.69|1 muffin=57
+crackers-saltine|Crackers, saltines|Crackers salés|421|9.5|74|8.8|1 cracker=3
+rice-cakes|Snacks, rice cakes, brown rice, plain|Galettes de riz|387|8.2|81.5|2.8|1 cake=9
+flour-wheat|Wheat flour, white, all-purpose, enriched|Farine de blé|364|10.3|76.3|0.98|1 cup=125;1 tbsp=8
+flour-whole-wheat|Flour, whole wheat|Farine complète|340|13.2|72|2.5|1 cup=120
+cornstarch|Cornstarch|Fécule de maïs|381|0.26|91.3|0.05|1 tbsp=8
+pancakes|Pancakes, plain, prepared from recipe|Pancakes|227|6.4|28.3|9.7|1 pancake=38
+waffles|Waffles, plain, prepared from recipe|Gaufre|291|7.9|32.9|14.1|1 waffle=75
+pizza-cheese|Pizza, cheese topping, regular crust, frozen, cooked|Pizza fromage|268|11.4|33|10|1 slice=107
+pizza-pepperoni|Pizza, pepperoni topping, regular crust, frozen, cooked|Pizza pepperoni|276|12|28.9|12.5|1 slice=107
+lentils-cooked|Lentils, mature seeds, cooked, boiled|Lentilles, cuites|116|9.02|20.1|0.38|1 cup=198
+lentils-dry|Lentils, raw|Lentilles, sèches|352|24.6|63.4|1.06|1/4 cup=48
+chickpeas-cooked|Chickpeas (garbanzo beans), mature seeds, cooked, boiled|Pois chiches, cuits|164|8.86|27.4|2.59|1 cup=164
+chickpeas-canned|Chickpeas, canned, drained|Pois chiches en conserve, égouttés|139|7.05|22.5|2.77|1 can drained=240
+black-beans-cooked|Beans, black, mature seeds, cooked, boiled|Haricots noirs, cuits|132|8.86|23.7|0.54|1 cup=172
+kidney-beans-cooked|Beans, kidney, red, mature seeds, cooked, boiled|Haricots rouges, cuits|127|8.67|22.8|0.5|1 cup=177
+white-beans-cooked|Beans, white, mature seeds, cooked, boiled|Haricots blancs, cuits|139|9.73|25.1|0.35|1 cup=179
+pinto-beans-cooked|Beans, pinto, mature seeds, cooked, boiled|Haricots pinto, cuits|143|9.01|26.2|0.65|1 cup=171
+baked-beans|Beans, baked, canned, plain or vegetarian|Haricots à la sauce tomate|94|4.75|21.1|0.37|1 cup=254
+split-peas-cooked|Peas, split, mature seeds, cooked, boiled|Pois cassés, cuits|118|8.34|21.1|0.39|1 cup=196
+edamame|Edamame, frozen, prepared|Edamame|121|11.9|8.91|5.2|1 cup=155
+hummus|Hummus, commercial|Houmous|166|7.9|14.3|9.6|1 tbsp=15;2 tbsp=30
+falafel|Falafel, home-prepared|Falafel|333|13.3|31.8|17.8|1 patty=17
+soy-milk|Soymilk, original and vanilla, unfortified|Lait de soja|54|3.27|6.28|1.75|1 cup=243
+almond-milk|Beverages, almond milk, unsweetened|Boisson à l'amande non sucrée|15|0.59|0.58|1.1|1 cup=240
+oat-milk|Beverages, oat milk, plain|Boisson à l'avoine|48|1|6.7|1.5|1 cup=240|~
+almonds|Nuts, almonds|Amandes|579|21.2|21.6|49.9|1 oz=28;1 almond=1.2;1 handful=30
+walnuts|Nuts, walnuts, english|Noix|654|15.2|13.7|65.2|1 oz=28;1 handful=30
+cashews|Nuts, cashew nuts, raw|Noix de cajou|553|18.2|30.2|43.9|1 oz=28;1 handful=30
+peanuts|Peanuts, all types, dry-roasted|Cacahuètes grillées|585|24.4|21.3|49.7|1 oz=28;1 handful=30
+pistachios|Nuts, pistachio nuts, raw|Pistaches|560|20.2|27.2|45.3|1 oz=28
+hazelnuts|Nuts, hazelnuts or filberts|Noisettes|628|15|16.7|60.8|1 oz=28
+pecans|Nuts, pecans|Noix de pécan|691|9.17|13.9|72|1 oz=28
+macadamia|Nuts, macadamia nuts, raw|Noix de macadamia|718|7.91|13.8|75.8|1 oz=28
+brazil-nuts|Nuts, brazilnuts, dried|Noix du Brésil|659|14.3|11.7|67.1|1 nut=5
+peanut-butter|Peanut butter, smooth style, without salt|Beurre de cacahuète|588|25.1|20|50.4|1 tbsp=16;2 tbsp=32
+almond-butter|Nuts, almond butter, plain|Purée d'amande|614|21|18.8|55.5|1 tbsp=16
+chia-seeds|Seeds, chia seeds, dried|Graines de chia|486|16.5|42.1|30.7|1 tbsp=12
+flaxseed|Seeds, flaxseed|Graines de lin|534|18.3|28.9|42.2|1 tbsp=10
+sunflower-seeds|Seeds, sunflower seed kernels, dry roasted|Graines de tournesol|582|19.3|24.1|49.8|1 oz=28
+pumpkin-seeds|Seeds, pumpkin and squash seed kernels, dried|Graines de courge|559|30.2|10.7|49|1 oz=28
+sesame-seeds|Seeds, sesame seeds, whole, dried|Graines de sésame|573|17.7|23.5|49.7|1 tbsp=9
+tahini|Seeds, sesame butter, tahini|Tahini|595|17|21.2|53.8|1 tbsp=15
+coconut-meat|Nuts, coconut meat, raw|Noix de coco, chair|354|3.33|15.2|33.5|1 piece=45
+coconut-milk|Nuts, coconut milk, canned|Lait de coco|197|2.02|2.81|21.3|1 cup=226
+apple|Apples, raw, with skin|Pomme|52|0.26|13.8|0.17|1 medium=182;1 small=149;1 large=223
+banana|Bananas, raw|Banane|89|1.09|22.8|0.33|1 medium=118;1 small=101;1 large=136
+orange|Oranges, raw, all commercial varieties|Orange|47|0.94|11.8|0.12|1 medium=131
+clementine|Tangerines (mandarin oranges), raw|Clémentine|53|0.81|13.3|0.31|1 fruit=74
+grapefruit|Grapefruit, raw, pink and red|Pamplemousse|42|0.77|10.7|0.14|1/2 fruit=123
+lemon|Lemons, raw, without peel|Citron|29|1.1|9.32|0.3|1 fruit=58
+lime|Limes, raw|Citron vert|30|0.7|10.5|0.2|1 fruit=67
+pear|Pears, raw|Poire|57|0.36|15.2|0.14|1 medium=178
+peach|Peaches, yellow, raw|Pêche|39|0.91|9.54|0.25|1 medium=150
+nectarine|Nectarines, raw|Nectarine|44|1.06|10.6|0.32|1 medium=142
+apricot|Apricots, raw|Abricot|48|1.4|11.1|0.39|1 fruit=35
+plum|Plums, raw|Prune (fruit frais)|46|0.7|11.4|0.28|1 fruit=66
+cherries|Cherries, sweet, raw|Cerises|63|1.06|16|0.2|1 cup=138;1 cherry=8
+grapes|Grapes, red or green, raw|Raisin|69|0.72|18.1|0.16|1 cup=151;1 grape=5
+strawberries|Strawberries, raw|Fraises|32|0.67|7.68|0.3|1 cup=152;1 berry=12
+blueberries|Blueberries, raw|Myrtilles|57|0.74|14.5|0.33|1 cup=148
+raspberries|Raspberries, raw|Framboises|52|1.2|11.9|0.65|1 cup=123
+blackberries|Blackberries, raw|Mûres|43|1.39|9.61|0.49|1 cup=144
+watermelon|Watermelon, raw|Pastèque|30|0.61|7.55|0.15|1 wedge=286;1 cup diced=152
+cantaloupe|Melons, cantaloupe, raw|Melon|34|0.84|8.16|0.19|1 cup diced=156;1/4 melon=138
+honeydew|Melons, honeydew, raw|Melon miel|36|0.54|9.09|0.14|1 cup diced=170
+pineapple|Pineapple, raw, all varieties|Ananas|50|0.54|13.1|0.12|1 cup chunks=165;1 slice=84
+mango|Mangos, raw|Mangue|60|0.82|15|0.38|1 fruit=336;1 cup sliced=165
+papaya|Papayas, raw|Papaye|43|0.47|10.8|0.26|1 cup=145
+kiwi|Kiwifruit, green, raw|Kiwi|61|1.14|14.7|0.52|1 fruit=69
+pomegranate|Pomegranates, raw|Grenade|83|1.67|18.7|1.17|1 fruit=282;1/2 cup arils=87
+avocado|Avocados, raw, all commercial varieties|Avocat|160|2|8.53|14.7|1 fruit=201;1/2 fruit=100
+figs-fresh|Figs, raw|Figue fraîche|74|0.75|19.2|0.3|1 medium=50
+dates-medjool|Dates, medjool|Dattes Medjool|277|1.81|75|0.15|1 date=24
+raisins|Raisins, seedless|Raisins secs|299|3.07|79.2|0.46|1 small box=43;1 tbsp=9
+prunes|Plums, dried (prunes), uncooked|Pruneaux|240|2.18|63.9|0.38|1 prune=9.5
+apricots-dried|Apricots, dried, sulfured, uncooked|Abricots secs|241|3.39|62.6|0.51|1 half=3.5
+cranberries-dried|Cranberries, dried, sweetened|Cranberries séchées|308|0.17|82.4|1.09|1/4 cup=40
+applesauce|Applesauce, canned, unsweetened|Compote de pommes sans sucre|42|0.17|11.3|0.1|1 cup=244;1 pot=100
+fruit-cocktail-canned|Fruit cocktail, canned, juice pack|Salade de fruits au sirop léger|46|0.46|11.9|0.01|1 cup=237
+olives-green|Olives, pickled, canned or bottled, green|Olives vertes|145|1.03|3.84|15.3|1 olive=2.7
+olives-black|Olives, ripe, canned (small-extra large)|Olives noires|115|0.84|6.26|10.7|1 olive=4.4
+tomato|Tomatoes, red, ripe, raw|Tomate|18|0.88|3.89|0.2|1 medium=123;1 cherry tomato=17
+cherry-tomatoes|Tomatoes, cherry, raw|Tomates cerises|18|0.88|3.89|0.2|1 cup=149;1 tomato=17
+tomatoes-canned|Tomatoes, red, ripe, canned, packed in tomato juice|Tomates en conserve|16|0.79|3.47|0.25|1 can=400
+tomato-paste|Tomato products, canned, paste|Concentré de tomate|82|4.32|18.9|0.47|1 tbsp=16
+tomato-sauce|Tomato products, canned, sauce|Coulis de tomate|24|1.2|5.31|0.3|1/2 cup=122
+pasta-sauce-marinara|Sauce, pasta, spaghetti/marinara, ready-to-serve|Sauce tomate pour pâtes|51|1.41|7.97|1.48|1/2 cup=132
+cucumber|Cucumber, with peel, raw|Concombre|15|0.65|3.63|0.11|1 cup sliced=104;1 cucumber=301
+lettuce-romaine|Lettuce, cos or romaine, raw|Laitue romaine|17|1.23|3.29|0.3|1 cup shredded=47
+lettuce-iceberg|Lettuce, iceberg, raw|Laitue iceberg|14|0.9|2.97|0.14|1 cup shredded=72
+lettuce-green-leaf|Lettuce, green leaf, raw|Salade verte|15|1.36|2.87|0.15|1 cup=36
+spinach-raw|Spinach, raw|Épinards, crus|23|2.86|3.63|0.39|1 cup=30
+spinach-cooked|Spinach, cooked, boiled, drained|Épinards, cuits|23|2.97|3.75|0.26|1 cup=180
+arugula|Arugula, raw|Roquette|25|2.58|3.65|0.66|1 cup=20
+kale-raw|Kale, raw|Chou kale, cru|49|4.28|8.75|0.93|1 cup=67
+cabbage-raw|Cabbage, raw|Chou blanc, cru|25|1.28|5.8|0.1|1 cup shredded=70
+cabbage-red|Cabbage, red, raw|Chou rouge, cru|31|1.43|7.37|0.16|1 cup shredded=70
+brussels-sprouts|Brussels sprouts, cooked, boiled, drained|Choux de Bruxelles, cuits|36|2.55|7.1|0.5|1 cup=156
+broccoli-raw|Broccoli, raw|Brocoli, cru|34|2.82|6.64|0.37|1 cup chopped=91
+broccoli-cooked|Broccoli, cooked, boiled, drained|Brocoli, cuit|35|2.38|7.18|0.41|1 cup=156
+cauliflower-raw|Cauliflower, raw|Chou-fleur, cru|25|1.92|4.97|0.28|1 cup=107
+cauliflower-cooked|Cauliflower, cooked, boiled, drained|Chou-fleur, cuit|23|1.84|4.11|0.45|1 cup=124
+carrot-raw|Carrots, raw|Carotte, crue|41|0.93|9.58|0.24|1 medium=61;1 cup grated=110
+carrot-cooked|Carrots, cooked, boiled, drained|Carottes, cuites|35|0.76|8.22|0.18|1 cup=156
+bell-pepper-red|Peppers, sweet, red, raw|Poivron rouge|31|0.99|6.03|0.3|1 medium=119;1 cup chopped=149
+bell-pepper-green|Peppers, sweet, green, raw|Poivron vert|20|0.86|4.64|0.17|1 medium=119
+onion-raw|Onions, raw|Oignon|40|1.1|9.34|0.1|1 medium=110;1 cup chopped=160
+onion-red|Onions, red, raw|Oignon rouge|40|1.1|9.34|0.1|1 medium=110
+shallot|Shallots, raw|Échalote|72|2.5|16.8|0.1|1 tbsp chopped=10
+spring-onion|Onions, spring or scallions, raw|Oignon nouveau|32|1.83|7.34|0.19|1 stalk=15
+garlic|Garlic, raw|Ail|149|6.36|33.1|0.5|1 clove=3
+leek|Leeks, (bulb and lower leaf-portion), raw|Poireau|61|1.5|14.2|0.3|1 leek=89
+celery|Celery, raw|Céleri branche|16|0.69|2.97|0.17|1 stalk=40
+zucchini|Squash, summer, zucchini, includes skin, raw|Courgette|17|1.21|3.11|0.32|1 medium=196
+eggplant|Eggplant, raw|Aubergine|25|0.98|5.88|0.18|1 medium=458;1 cup cubes=82
+mushrooms|Mushrooms, white, raw|Champignons de Paris|22|3.09|3.26|0.34|1 cup sliced=70
+mushrooms-cooked|Mushrooms, white, cooked, boiled, drained|Champignons, cuits|28|2.17|5.29|0.47|1 cup=156
+asparagus|Asparagus, raw|Asperges|20|2.2|3.88|0.12|1 spear=16
+green-beans|Beans, snap, green, raw|Haricots verts|31|1.83|6.97|0.22|1 cup=110
+green-beans-cooked|Beans, snap, green, cooked, boiled, drained|Haricots verts, cuits|35|1.89|7.88|0.28|1 cup=125
+peas-green|Peas, green, frozen, cooked, boiled, drained|Petits pois, cuits|78|5.15|14.3|0.27|1 cup=160
+corn-sweet|Corn, sweet, yellow, cooked, boiled, drained|Maïs doux, cuit|96|3.41|21|1.5|1 ear=100;1 cup=145
+corn-canned|Corn, sweet, yellow, canned, drained solids|Maïs en conserve, égoutté|67|1.95|14.3|0.77|1 can drained=280
+potato-baked|Potatoes, baked, flesh and skin|Pomme de terre au four|93|2.5|21.1|0.13|1 medium=173
+potato-boiled|Potatoes, boiled, cooked without skin|Pomme de terre à l'eau|86|1.71|20|0.1|1 medium=136
+potato-raw|Potatoes, flesh and skin, raw|Pomme de terre, crue|77|2.05|17.5|0.09|1 medium=213
+mashed-potatoes|Potatoes, mashed, home-prepared, whole milk and butter added|Purée de pommes de terre|113|1.86|16.8|4.2|1 cup=210
+french-fries|Potatoes, french fried, frozen, oven-heated|Frites au four|172|2.91|26.4|6.16|1 serving=85
+fries-fast-food|Fast foods, potato, french fried in vegetable oil|Frites (restauration rapide)|312|3.43|41.4|14.7|1 medium=117
+sweet-potato-baked|Sweet potato, cooked, baked in skin|Patate douce au four|90|2.01|20.7|0.15|1 medium=114
+butternut-squash|Squash, winter, butternut, cooked, baked|Courge butternut, cuite|40|0.9|10.5|0.09|1 cup cubes=205
+pumpkin|Pumpkin, raw|Potiron|26|1|6.5|0.1|1 cup cubes=116
+beets-cooked|Beets, cooked, boiled, drained|Betterave cuite|44|1.68|9.96|0.18|1 beet=50
+radish|Radishes, raw|Radis|16|0.68|3.4|0.1|1 radish=4.5
+fennel|Fennel, bulb, raw|Fenouil|31|1.24|7.3|0.2|1 bulb=234
+artichoke|Artichokes, (globe or french), cooked, boiled, drained|Artichaut, cuit|51|2.89|11.4|0.34|1 medium=120
+turnip|Turnips, raw|Navet|28|0.9|6.43|0.1|1 medium=122
+bok-choy|Cabbage, chinese (pak-choi), raw|Pak choï|13|1.5|2.18|0.2|1 cup shredded=70
+bean-sprouts|Mung beans, mature seeds, sprouted, raw|Pousses de soja|30|3.04|5.94|0.18|1 cup=104
+sauerkraut|Sauerkraut, canned, solids and liquids|Choucroute|19|0.91|4.28|0.14|1 cup=142
+pickles|Pickles, cucumber, dill or kosher dill|Cornichons|11|0.33|2.41|0.2|1 spear=35
+mixed-vegetables-frozen|Vegetables, mixed, frozen, cooked, boiled, drained|Légumes mélangés, cuits|65|2.86|13.1|0.15|1 cup=182
+salsa|Sauce, salsa, ready-to-serve|Salsa|36|1.5|7|0.2|2 tbsp=36
+guacamole|Guacamole, commercial|Guacamole|157|1.9|8.6|14.2|2 tbsp=30
+olive-oil|Oil, olive, salad or cooking|Huile d'olive|884|0|0|100|1 tbsp=13.5;1 tsp=4.5
+vegetable-oil|Oil, canola|Huile de colza|884|0|0|100|1 tbsp=14
+sunflower-oil|Oil, sunflower, linoleic|Huile de tournesol|884|0|0|100|1 tbsp=13.6
+coconut-oil|Oil, coconut|Huile de coco|892|0|0|99.1|1 tbsp=13.6
+margarine|Margarine-like spread, approximately 60% fat|Margarine|535|0.4|0.7|60|1 tbsp=14
+mayonnaise|Salad dressing, mayonnaise, regular|Mayonnaise|680|0.96|0.57|74.9|1 tbsp=13.8
+ketchup|Catsup|Ketchup|101|1.04|27.4|0.1|1 tbsp=17
+mustard|Mustard, prepared, yellow|Moutarde|60|3.74|5.83|3.34|1 tsp=5
+mustard-dijon|Mustard, Dijon|Moutarde de Dijon|151|7|5|11|1 tsp=5|~
+soy-sauce|Soy sauce made from soy and wheat (shoyu)|Sauce soja|53|8.14|4.93|0.57|1 tbsp=16
+vinaigrette|Salad dressing, italian dressing, commercial, regular|Vinaigrette|240|0.4|10|21.1|1 tbsp=14.7
+ranch-dressing|Salad dressing, ranch dressing, regular|Sauce ranch|430|1.32|5.9|44.5|1 tbsp=15
+pesto|Pesto sauce, ready-to-serve|Pesto|418|5|7|41|1 tbsp=16
+bbq-sauce|Sauce, barbecue|Sauce barbecue|172|0.82|40.8|0.63|1 tbsp=17
+honey|Honey|Miel|304|0.3|82.4|0|1 tbsp=21;1 tsp=7
+maple-syrup|Syrups, maple|Sirop d'érable|260|0.04|67|0.06|1 tbsp=20
+sugar-white|Sugars, granulated|Sucre blanc|387|0|100|0|1 tsp=4.2;1 tbsp=12.5;1 cube=4
+sugar-brown|Sugars, brown|Sucre roux|380|0.12|98.1|0|1 tsp=4.6
+jam|Jams and preserves|Confiture|278|0.37|68.9|0.07|1 tbsp=20
+nutella|Chocolate-flavored hazelnut spread|Pâte à tartiner chocolat-noisette|539|5.41|62.2|29.7|1 tbsp=19
+chocolate-dark|Chocolate, dark, 70-85% cacao solids|Chocolat noir 70-85 %|598|7.79|45.9|42.6|1 square=10;1 bar=100
+chocolate-milk-bar|Candies, milk chocolate|Chocolat au lait|535|7.65|59.4|29.7|1 square=10;1 bar=44
+cookies-chocolate-chip|Cookies, chocolate chip, commercially prepared, regular|Cookies aux pépites de chocolat|488|5.4|64.3|24.7|1 cookie=10
+cookie-butter|Cookies, butter, commercially prepared|Petit-beurre|467|6.1|68.9|18.8|1 biscuit=8
+brownie|Brownies, commercially prepared|Brownie|405|4.8|63.9|16.3|1 piece=56
+donut|Doughnuts, cake-type, plain|Beignet|421|5.17|49.6|22.9|1 medium=47
+muffin-blueberry|Muffins, blueberry, commercially prepared|Muffin aux myrtilles|377|4.38|52.8|16.4|1 muffin=113
+cake-chocolate|Cake, chocolate, commercially prepared with chocolate frosting|Gâteau au chocolat|367|4.1|54.6|16.4|1 slice=64
+cheesecake|Cheesecake commercially prepared|Cheesecake|321|5.5|25.5|22.5|1 slice=80
+apple-pie|Pie, apple, commercially prepared|Tarte aux pommes|237|1.9|34|11|1 slice=125
+pudding-chocolate|Puddings, chocolate, ready-to-eat|Crème dessert au chocolat|142|2.6|23|4.4|1 pot=113
+potato-chips|Snacks, potato chips, plain, salted|Chips|536|7|53|34.6|1 oz=28;1 small bag=45
+tortilla-chips|Snacks, tortilla chips, plain|Chips de maïs|489|7.8|66.4|21.2|1 oz=28
+popcorn-air|Snacks, popcorn, air-popped|Pop-corn nature|387|12.9|77.8|4.54|1 cup=8
+pretzels|Snacks, pretzels, hard, plain, salted|Bretzels|380|10.3|79.8|2.93|1 oz=28
+granola-bar|Snacks, granola bars, hard, plain|Barre de céréales|471|10.1|64.4|19.8|1 bar=25
+protein-bar|Protein bar (generic, whey-based)|Barre protéinée|350|30|40|10|1 bar=60|~
+whey-protein|Whey protein powder, isolate (generic)|Protéine whey|370|80|8|2|1 scoop=30|~
+orange-juice|Orange juice, raw|Jus d'orange|45|0.7|10.4|0.2|1 cup=248;1 glass=200
+apple-juice|Apple juice, canned or bottled, unsweetened|Jus de pomme|46|0.1|11.3|0.13|1 cup=248;1 glass=200
+cola|Beverages, carbonated, cola, regular|Cola|37|0.07|9.56|0.02|1 can=368
+cola-diet|Beverages, carbonated, cola, without caffeine, low calorie|Cola light|2|0.1|0.3|0|1 can=355
+coffee-brewed|Beverages, coffee, brewed, prepared with tap water|Café|1|0.12|0|0.02|1 cup=237;1 espresso=30
+espresso|Beverages, coffee, brewed, espresso|Expresso|9|0.12|1.67|0.18|1 shot=30
+cappuccino|Coffee, cappuccino, with whole milk|Cappuccino|37|2|2.9|2|1 cup=240|~
+latte|Coffee, latte, with whole milk|Café latte|54|2.9|4.3|2.8|1 cup=240|~
+tea-brewed|Beverages, tea, black, brewed, prepared with tap water|Thé|1|0|0.3|0|1 cup=237
+hot-chocolate|Beverages, hot chocolate, prepared with whole milk|Chocolat chaud|77|3.5|10.7|2.3|1 cup=250
+smoothie-fruit|Smoothie, fruit, without dairy (generic)|Smoothie aux fruits|55|0.6|13|0.3|1 bottle=250|~
+sports-drink|Beverages, sports drink, fruit-flavored|Boisson isotonique|26|0|6.4|0|1 bottle=500
+hamburger|Fast foods, hamburger, single, regular patty, plain|Hamburger|254|13.3|30.3|9.4|1 sandwich=105
+cheeseburger|Fast foods, cheeseburger, single, regular patty, plain|Cheeseburger|263|14|28|11|1 sandwich=114|~
+chicken-nuggets|Fast foods, chicken tenders / nuggets|Nuggets de poulet|296|15.3|17.5|18.4|1 piece=16|~
+fried-chicken|Fast food, fried chicken, breast, meat and skin and breading|Poulet frit|260|21|10.3|15|1 piece=160|~
+burrito-bean|Burrito, beans and cheese|Burrito haricots fromage|203|8|28|6.6|1 burrito=170|~
+taco-beef|Taco, beef, with cheese and lettuce|Taco au bœuf|226|9|20|12.1|1 taco=78|~
+sushi-roll|Sushi, roll with vegetables or fish (generic)|Sushi maki|140|4.5|27|1|1 piece=30|~
+sandwich-ham-cheese|Sandwich, ham and cheese|Sandwich jambon-fromage|241|14.4|24.8|9.5|1 sandwich=146|~
+lasagna|Lasagna with meat sauce, frozen, prepared|Lasagnes à la bolognaise|135|8.4|13.9|5.1|1 portion=250
+spaghetti-bolognese|Spaghetti with meat sauce|Spaghetti bolognaise|132|7.3|17|3.7|1 plate=300|~
+mac-and-cheese|Macaroni and cheese, prepared|Macaroni au fromage|164|6.7|20|6.3|1 cup=200|~
+fried-rice|Rice, fried, with vegetables|Riz cantonais|163|4.2|23.3|5.9|1 cup=198|~
+chili-con-carne|Chili con carne with beans, canned|Chili con carne|105|7.6|11|3.5|1 cup=256
+chicken-noodle-soup|Soup, chicken noodle, canned, prepared with water|Soupe poulet vermicelle|25|1.3|3.1|0.8|1 cup=241
+tomato-soup|Soup, tomato, canned, prepared with water|Soupe de tomate|30|0.8|6.6|0.3|1 cup=244
+vegetable-soup|Soup, vegetable, canned, prepared with water|Soupe de légumes|28|1.2|4.9|0.6|1 bowl=250
+lentil-soup|Soup, lentil, ready-to-serve|Soupe de lentilles|56|3.6|9|0.4|1 bowl=250|~
+miso-soup|Soup, miso|Soupe miso|40|2.6|5.3|1.3|1 bowl=240|~
+caesar-salad|Salad, Caesar, with chicken|Salade César au poulet|127|10|4.6|7.8|1 bowl=250|~
+quiche-lorraine|Quiche lorraine|Quiche lorraine|268|10.4|15|18.8|1 slice=150|~
+omelette-cheese|Omelet, with cheese|Omelette au fromage|185|11.6|1.2|14.8|2-egg omelette=120|~
+crepe|Crepe, plain|Crêpe nature|224|6.4|28|9.6|1 crêpe=50|~
+curry-chicken|Chicken curry with sauce|Curry de poulet|142|11.6|6.3|7.9|1 portion=250|~
+stir-fry-tofu|Tofu and vegetables, stir-fried|Tofu sauté aux légumes|98|6.6|6|5.9|1 portion=250|~
+tabbouleh|Tabbouleh|Taboulé|119|2.6|15|5.8|1 cup=160|~
+couscous-dish|Couscous with vegetables and meat|Couscous royal|146|8|17|5|1 plate=350|~
+paella|Paella with seafood|Paella|152|9.4|17.2|5|1 plate=300|~
+ratatouille|Ratatouille|Ratatouille|58|1.2|6.4|3.4|1 portion=200|~
+gnocchi|Gnocchi, potato, cooked|Gnocchis, cuits|133|3.3|28|0.4|1 portion=150|~
+polenta-cooked|Polenta, cooked|Polenta, cuite|70|1.6|15|0.3|1 cup=240|~
+risotto|Risotto, plain|Risotto|166|3.4|22|6.8|1 portion=250|~
+vinegar|Vinegar, balsamic|Vinaigre balsamique|88|0.49|17|0|1 tbsp=16
+salt|Salt, table|Sel|0|0|0|0|1 tsp=6;1 pinch=0.4
+basil-fresh|Basil, fresh|Basilic frais|23|3.15|2.65|0.64|5 leaves=2.5
+parsley-fresh|Parsley, fresh|Persil frais|36|2.97|6.33|0.79|1 tbsp=3.8
+ginger-root|Ginger root, raw|Gingembre frais|80|1.82|17.8|0.75|1 tsp=2
+chili-pepper|Peppers, hot chili, red, raw|Piment rouge|40|1.87|8.81|0.44|1 pepper=45

@@ -6,6 +6,8 @@ export const app = {
   scheme: 'valyyu',
   iosBundleId: 'com.valyyu.app',
   androidPackage: 'com.valyyu.app',
+  /** What people say to address the app by voice (spoken variants of the name). */
+  wakeWords: ['valyyu', 'valyu', 'valiou', 'valu', 'vayylo'],
   legal: {
     termsUrl: null as string | null,
     privacyUrl: null as string | null,

@@ -63,6 +63,22 @@ export default tseslint.config(
     },
   },
   {
+    // Logic imported from the first app (Valyyu-App), kept as-is with its 344 tests. Type-aware strict rules are
+    // relaxed here until it is tightened module by module; new code elsewhere stays fully strict.
+    files: ['packages/domain/**/*.{ts,mjs}', 'packages/life-data/**/*.ts'],
+    extends: [tseslint.configs.disableTypeChecked, tseslint.configs.recommended],
+    rules: {
+      '@typescript-eslint/no-non-null-assertion': 'off',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        { argsIgnorePattern: '^_', varsIgnorePattern: '^_', ignoreRestSiblings: true },
+      ],
+      '@typescript-eslint/no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],
+      'no-useless-assignment': 'off',
+    },
+  },
+  {
     // Testing Library types element props as any; reading props.style in assertions is intended.
     files: ['**/__tests__/**', '**/*.test.{ts,tsx}'],
     rules: {

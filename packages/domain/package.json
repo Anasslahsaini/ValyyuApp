@@ -1,0 +1,28 @@
+{
+  "name": "@workspace/domain",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./*": "./src/*.ts",
+    "./data/*": "./data/*",
+    "./constants/*": "./constants/*.ts"
+  },
+  "scripts": {
+    "test": "tsx --test src/__tests__/*.test.ts src/__tests__/*.test.mjs",
+    "typecheck": "tsc -p tsconfig.json",
+    "build:recipes": "node scripts/build-recipes.mjs"
+  },
+  "dependencies": {
+    "@workspace/config": "workspace:*",
+    "@workspace/life-data": "workspace:*",
+    "tiny-inflate": "1.0.3",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@workspace/tsconfig": "workspace:*",
+    "tsx": "^4.21.0",
+    "typescript": "catalog:"
+  }
+}
