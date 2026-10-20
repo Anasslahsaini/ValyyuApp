@@ -1,0 +1,29 @@
+{
+  "name": "@workspace/i18n",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@workspace/config": "workspace:*",
+    "i18next": "^26.5.0",
+    "react-i18next": "^17.1.0"
+  },
+  "peerDependencies": {
+    "react": ">=19"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "~19.2.0",
+    "@workspace/tsconfig": "workspace:*",
+    "react": "19.3.0",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}
